@@ -64,5 +64,17 @@ namespace CapaVista_Liquidacion_Rrhh.Formularios
                 return null;
             return new Font(Original.FontFamily, (float)(Original.Size * Factor), Original.Style, Original.Unit);
         }
+
+        private void RrhhBtnCatalogoMotivoBaja_Click(object sender, EventArgs e)
+        {
+            FrmMotivoBajaNavegador MotivoBaja = new FrmMotivoBajaNavegador();
+            MotivoBaja.ShowDialog();
+        }
+
+        private void RrhhBtnCatalogoParametroLey_Click(object sender, EventArgs e)
+        {
+            FrmParametrosLeyNavegador ParametroLey = new FrmParametrosLeyNavegador();
+            ParametroLey.ShowDialog();
+        }
     }
 }

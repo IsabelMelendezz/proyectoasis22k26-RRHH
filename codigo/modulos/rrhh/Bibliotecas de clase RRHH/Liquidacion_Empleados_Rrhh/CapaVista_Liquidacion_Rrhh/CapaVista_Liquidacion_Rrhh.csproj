@@ -34,6 +34,9 @@
     <Reference Include="CapaControlador_Liquidacion_Rrhh">
       <HintPath>..\CapaControlador_Liquidacion_Rrhh\bin\Debug\CapaControlador_Liquidacion_Rrhh.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVista_Navegador">
+      <HintPath>..\..\..\..\..\componentes\navegador\Navegador\CapaVista_Navegador\bin\Debug\CapaVista_Navegador.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -52,6 +55,18 @@
     <Compile Include="Formularios\FrmLiquidacionEmpleados.Designer.cs">
       <DependentUpon>FrmLiquidacionEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmMotivoBajaNavegador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmMotivoBajaNavegador.Designer.cs">
+      <DependentUpon>FrmMotivoBajaNavegador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmParametrosLeyNavegador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmParametrosLeyNavegador.Designer.cs">
+      <DependentUpon>FrmParametrosLeyNavegador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -62,6 +77,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Formularios\FrmLiquidacionEmpleados.resx">
       <DependentUpon>FrmLiquidacionEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMotivoBajaNavegador.resx">
+      <DependentUpon>FrmMotivoBajaNavegador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmParametrosLeyNavegador.resx">
+      <DependentUpon>FrmParametrosLeyNavegador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
