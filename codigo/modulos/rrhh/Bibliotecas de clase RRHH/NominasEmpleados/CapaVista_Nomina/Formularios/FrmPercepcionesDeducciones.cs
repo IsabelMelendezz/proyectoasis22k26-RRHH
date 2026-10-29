@@ -75,14 +75,17 @@ namespace CapaVista_Nomina.Formularios
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
 
+        private void RrhhBtnAsignacionConceptos_Click(object sender, EventArgs e)
+        {
+            FrmAsignacionConceptos Conceptos = new FrmAsignacionConceptos();
+            Conceptos.ShowDialog(this);
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void RrhhBtnRangos_Click(object sender, EventArgs e)
         {
-
+            FrmRangos Rangos = new FrmRangos();
+            Rangos.ShowDialog(this);
         }
     }
 }

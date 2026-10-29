@@ -535,8 +535,8 @@ namespace CapaVista_Rrhh.Formularios
 
         private void RrhhBtnNomina_Click(object sender, EventArgs e)
         {
-            FrmPercepcionesDeducciones Percepciones = new FrmPercepcionesDeducciones();
-            Percepciones.ShowDialog(this);
+            FrmNominaEmpleado Nomina = new FrmNominaEmpleado();
+            Nomina.ShowDialog(this);
         }
 
         private void RrhhBtnCapacitaciones_Click(object sender, EventArgs e)

@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\FrmNominaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmNominaEmpleado.Designer.cs">
+      <DependentUpon>FrmNominaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmNominaEncabezado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmNominaEncabezado.Designer.cs">
+      <DependentUpon>FrmNominaEncabezado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmPercepcionesDeducciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmPercepcionesDeducciones.Designer.cs">
       <DependentUpon>FrmPercepcionesDeducciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmAsignacionConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmAsignacionConceptos.Designer.cs">
+      <DependentUpon>FrmAsignacionConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmRangos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRangos.Designer.cs">
+      <DependentUpon>FrmRangos.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -63,8 +87,20 @@
     <Folder Include="Ayudas\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\FrmNominaEmpleado.resx">
+      <DependentUpon>FrmNominaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmNominaEncabezado.resx">
+      <DependentUpon>FrmNominaEncabezado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPercepcionesDeducciones.resx">
       <DependentUpon>FrmPercepcionesDeducciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmAsignacionConceptos.resx">
+      <DependentUpon>FrmAsignacionConceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmRangos.resx">
+      <DependentUpon>FrmRangos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +160,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\boton_consultar_sin_bordes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_nomina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pb_percepcion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pb_Nominas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_ayuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_TotalDeducciones.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
