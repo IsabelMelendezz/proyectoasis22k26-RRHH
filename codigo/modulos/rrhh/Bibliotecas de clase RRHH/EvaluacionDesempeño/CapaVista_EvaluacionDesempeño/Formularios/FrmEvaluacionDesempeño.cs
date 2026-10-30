@@ -14,12 +14,11 @@ using System.Windows.Forms;
  * Autor : Daniella Jurado
  * Carné : 0901-23-3679
  * Fecha : 12/10/2026
+ * Modificado por : Byron Alexander Chiquito Paredes 0901-23-3747 (29/10/2026)
  * ==================================================================
  * Propósito :
  *  Ventana 9401 - Evaluación de Desempeño
  *  Menú de opciones relacionadas, sin eventos ni lógica.
- * Modificado por : Byron Alexander Chiquito Paredes 0901-23-3747 (29/10/2026)
- *  Realizar Evaluación (9402) se abre desde Catálogos en el MDI.
  * ===================================================================
 */
 
@@ -31,6 +30,14 @@ namespace CapaVista_EvaluacionDesempeño.Formularios
         {
             InitializeComponent();
         }
+
+        // Inicio cambio - Byron Alexander Chiquito Paredes - 0901-23-3747
+        // Se quitó el llamado: Realizar Evaluación (9402) se abre desde Catálogos en el MDI.
+        // El botón se deja por si se le asigna otra ventana.
+        private void RrhhBtnAbrirRealizarEvaluacion_Click(object sender, EventArgs e)
+        {
+        }
+        // Fin cambio - Byron Alexander Chiquito Paredes - 0901-23-3747
 
         private void RrhhBtnAbrirPlanMejora_Click(object sender, EventArgs e)
         {
