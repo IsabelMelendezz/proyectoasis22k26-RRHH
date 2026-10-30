@@ -31,11 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEvaluacionDesempeño));
             this.RrhhPnlOpciones = new System.Windows.Forms.Panel();
             this.RrhhLblOpciones = new System.Windows.Forms.Label();
-            this.RrhhPnlRealizarEvaluacion = new System.Windows.Forms.Panel();
-            this.RrhhPbRealizarEvaluacion = new System.Windows.Forms.PictureBox();
-            this.RrhhLblRealizarEvaluacionTitulo = new System.Windows.Forms.Label();
-            this.RrhhLblRealizarEvaluacionDescripcion = new System.Windows.Forms.Label();
-            this.RrhhBtnAbrirRealizarEvaluacion = new System.Windows.Forms.Button();
             this.RrhhPnlPlanMejora = new System.Windows.Forms.Panel();
             this.RrhhPbPlanMejora = new System.Windows.Forms.PictureBox();
             this.RrhhLblPlanMejoraTitulo = new System.Windows.Forms.Label();
@@ -55,8 +50,6 @@
             this.RrhhLblSubtitulo = new System.Windows.Forms.Label();
             this.RrhhPbMascota = new System.Windows.Forms.PictureBox();
             this.RrhhPnlOpciones.SuspendLayout();
-            this.RrhhPnlRealizarEvaluacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbRealizarEvaluacion)).BeginInit();
             this.RrhhPnlPlanMejora.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbPlanMejora)).BeginInit();
             this.RrhhPnlVerEvaluaciones.SuspendLayout();
@@ -90,75 +83,6 @@
             this.RrhhLblOpciones.TabIndex = 0;
             this.RrhhLblOpciones.Text = "Opciones Relacionadas";
             // 
-            // RrhhPnlRealizarEvaluacion
-            // 
-            this.RrhhPnlRealizarEvaluacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
-            this.RrhhPnlRealizarEvaluacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RrhhPnlRealizarEvaluacion.Controls.Add(this.RrhhPbRealizarEvaluacion);
-            this.RrhhPnlRealizarEvaluacion.Controls.Add(this.RrhhLblRealizarEvaluacionTitulo);
-            this.RrhhPnlRealizarEvaluacion.Controls.Add(this.RrhhLblRealizarEvaluacionDescripcion);
-            this.RrhhPnlRealizarEvaluacion.Controls.Add(this.RrhhBtnAbrirRealizarEvaluacion);
-            this.RrhhPnlRealizarEvaluacion.Location = new System.Drawing.Point(8, 218);
-            this.RrhhPnlRealizarEvaluacion.Margin = new System.Windows.Forms.Padding(2);
-            this.RrhhPnlRealizarEvaluacion.Name = "RrhhPnlRealizarEvaluacion";
-            this.RrhhPnlRealizarEvaluacion.Size = new System.Drawing.Size(357, 370);
-            this.RrhhPnlRealizarEvaluacion.TabIndex = 2;
-            // 
-            // RrhhPbRealizarEvaluacion
-            // 
-            this.RrhhPbRealizarEvaluacion.BackColor = System.Drawing.Color.Transparent;
-            this.RrhhPbRealizarEvaluacion.Image = global::CapaVista_EvaluacionDesempeño.Properties.Resources.btn_realizarEvaluacion;
-            this.RrhhPbRealizarEvaluacion.Location = new System.Drawing.Point(20, 18);
-            this.RrhhPbRealizarEvaluacion.Margin = new System.Windows.Forms.Padding(2);
-            this.RrhhPbRealizarEvaluacion.Name = "RrhhPbRealizarEvaluacion";
-            this.RrhhPbRealizarEvaluacion.Size = new System.Drawing.Size(124, 128);
-            this.RrhhPbRealizarEvaluacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.RrhhPbRealizarEvaluacion.TabIndex = 0;
-            this.RrhhPbRealizarEvaluacion.TabStop = false;
-            // 
-            // RrhhLblRealizarEvaluacionTitulo
-            // 
-            this.RrhhLblRealizarEvaluacionTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.RrhhLblRealizarEvaluacionTitulo.Font = new System.Drawing.Font("Tahoma", 12.6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhLblRealizarEvaluacionTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblRealizarEvaluacionTitulo.Location = new System.Drawing.Point(24, 156);
-            this.RrhhLblRealizarEvaluacionTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.RrhhLblRealizarEvaluacionTitulo.Name = "RrhhLblRealizarEvaluacionTitulo";
-            this.RrhhLblRealizarEvaluacionTitulo.Size = new System.Drawing.Size(322, 65);
-            this.RrhhLblRealizarEvaluacionTitulo.TabIndex = 1;
-            this.RrhhLblRealizarEvaluacionTitulo.Text = "Realizar Evaluación\r\nde Desempeño";
-            // 
-            // RrhhLblRealizarEvaluacionDescripcion
-            // 
-            this.RrhhLblRealizarEvaluacionDescripcion.BackColor = System.Drawing.Color.Transparent;
-            this.RrhhLblRealizarEvaluacionDescripcion.Font = new System.Drawing.Font("Tahoma", 10.44F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhLblRealizarEvaluacionDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.RrhhLblRealizarEvaluacionDescripcion.Location = new System.Drawing.Point(25, 224);
-            this.RrhhLblRealizarEvaluacionDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.RrhhLblRealizarEvaluacionDescripcion.Name = "RrhhLblRealizarEvaluacionDescripcion";
-            this.RrhhLblRealizarEvaluacionDescripcion.Size = new System.Drawing.Size(322, 74);
-            this.RrhhLblRealizarEvaluacionDescripcion.TabIndex = 2;
-            this.RrhhLblRealizarEvaluacionDescripcion.Text = "Registra y evalúa el desempeño del personal según los criterios establecidos para" +
-    " cada ciclo.";
-            // 
-            // RrhhBtnAbrirRealizarEvaluacion
-            // 
-            this.RrhhBtnAbrirRealizarEvaluacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhBtnAbrirRealizarEvaluacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RrhhBtnAbrirRealizarEvaluacion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.RrhhBtnAbrirRealizarEvaluacion.FlatAppearance.BorderSize = 2;
-            this.RrhhBtnAbrirRealizarEvaluacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnAbrirRealizarEvaluacion.Font = new System.Drawing.Font("Tahoma", 11.52F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhBtnAbrirRealizarEvaluacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.RrhhBtnAbrirRealizarEvaluacion.Location = new System.Drawing.Point(112, 308);
-            this.RrhhBtnAbrirRealizarEvaluacion.Margin = new System.Windows.Forms.Padding(2);
-            this.RrhhBtnAbrirRealizarEvaluacion.Name = "RrhhBtnAbrirRealizarEvaluacion";
-            this.RrhhBtnAbrirRealizarEvaluacion.Size = new System.Drawing.Size(133, 42);
-            this.RrhhBtnAbrirRealizarEvaluacion.TabIndex = 3;
-            this.RrhhBtnAbrirRealizarEvaluacion.Text = "Abrir";
-            this.RrhhBtnAbrirRealizarEvaluacion.UseVisualStyleBackColor = false;
-            this.RrhhBtnAbrirRealizarEvaluacion.Click += new System.EventHandler(this.RrhhBtnAbrirRealizarEvaluacion_Click);
-            // 
             // RrhhPnlPlanMejora
             // 
             this.RrhhPnlPlanMejora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(244)))), ((int)(((byte)(240)))));
@@ -167,7 +91,7 @@
             this.RrhhPnlPlanMejora.Controls.Add(this.RrhhLblPlanMejoraTitulo);
             this.RrhhPnlPlanMejora.Controls.Add(this.RrhhLblPlanMejoraDescripcion);
             this.RrhhPnlPlanMejora.Controls.Add(this.RrhhBtnAbrirPlanMejora);
-            this.RrhhPnlPlanMejora.Location = new System.Drawing.Point(383, 218);
+            this.RrhhPnlPlanMejora.Location = new System.Drawing.Point(195, 218);
             this.RrhhPnlPlanMejora.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhPnlPlanMejora.Name = "RrhhPnlPlanMejora";
             this.RrhhPnlPlanMejora.Size = new System.Drawing.Size(357, 370);
@@ -235,7 +159,7 @@
             this.RrhhPnlVerEvaluaciones.Controls.Add(this.RrhhLblVerEvaluacionesTitulo);
             this.RrhhPnlVerEvaluaciones.Controls.Add(this.RrhhLblVerEvaluacionesDescripcion);
             this.RrhhPnlVerEvaluaciones.Controls.Add(this.RrhhBtnAbrirVerEvaluaciones);
-            this.RrhhPnlVerEvaluaciones.Location = new System.Drawing.Point(758, 218);
+            this.RrhhPnlVerEvaluaciones.Location = new System.Drawing.Point(570, 218);
             this.RrhhPnlVerEvaluaciones.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhPnlVerEvaluaciones.Name = "RrhhPnlVerEvaluaciones";
             this.RrhhPnlVerEvaluaciones.Size = new System.Drawing.Size(357, 370);
@@ -403,7 +327,6 @@
             this.ClientSize = new System.Drawing.Size(1123, 716);
             this.Controls.Add(this.RrhhPnlEncabezado);
             this.Controls.Add(this.RrhhPnlOpciones);
-            this.Controls.Add(this.RrhhPnlRealizarEvaluacion);
             this.Controls.Add(this.RrhhPnlPlanMejora);
             this.Controls.Add(this.RrhhPnlVerEvaluaciones);
             this.Controls.Add(this.RrhhPnlInformacion);
@@ -416,8 +339,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "9401 – EvaluacionDesempeño";
             this.RrhhPnlOpciones.ResumeLayout(false);
-            this.RrhhPnlRealizarEvaluacion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbRealizarEvaluacion)).EndInit();
             this.RrhhPnlPlanMejora.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbPlanMejora)).EndInit();
             this.RrhhPnlVerEvaluaciones.ResumeLayout(false);
@@ -439,11 +360,6 @@
         private System.Windows.Forms.PictureBox RrhhPbMascota;
         private System.Windows.Forms.Panel RrhhPnlOpciones;
         private System.Windows.Forms.Label RrhhLblOpciones;
-        private System.Windows.Forms.Panel RrhhPnlRealizarEvaluacion;
-        private System.Windows.Forms.PictureBox RrhhPbRealizarEvaluacion;
-        private System.Windows.Forms.Label RrhhLblRealizarEvaluacionTitulo;
-        private System.Windows.Forms.Label RrhhLblRealizarEvaluacionDescripcion;
-        private System.Windows.Forms.Button RrhhBtnAbrirRealizarEvaluacion;
         private System.Windows.Forms.Panel RrhhPnlPlanMejora;
         private System.Windows.Forms.PictureBox RrhhPbPlanMejora;
         private System.Windows.Forms.Label RrhhLblPlanMejoraTitulo;
