@@ -7,7 +7,8 @@
  * ==================================================================
  * Propósito :
  *  Formulario MDI (menú de inicio) del módulo de Recursos Humanos.
- *  Tiene el menú lateral con las opciones del módulo, la barra de
+ *  Tiene el menú lateral con los procesos del módulo y el desplegable
+ *  de Catálogos (las ventanas que usan el Navegador), la barra de
  *  arriba con el usuario y el rol, y el panel de bienvenida con el
  *  resumen de indicadores (KPIs), la información del módulo y la
  *  nota de acceso por perfil. Es la única ventana del módulo que se puede
@@ -21,6 +22,7 @@
  * ===================================================================
 */
 
+using CapaVista_AsigCapacitacion.Formularios;
 using CapaVista_CierreNominas.Formularios;
 using CapaVista_Empleado.Formularios;
 using CapaVista_EvaluacionDesempeño.Formularios;
@@ -311,10 +313,8 @@ namespace CapaVista_Rrhh.Formularios
         {
             var Iconos = new Dictionary<Button, Image>
             {
-                { RrhhBtnEmpleados, Properties.Resources.btn_empleados },
                 { RrhhBtnAsistencia, Properties.Resources.btn_asistencia },
-                { RrhhBtnPermisosVacaciones, Properties.Resources.btn_permisos },
-                { RrhhBtnCapacitaciones, Properties.Resources.btn_capacitaciones },
+                { RrhhBtnAsigCapacitacion, Properties.Resources.btn_capacitaciones },
                 { RrhhBtnEvaluacionDesempeno, Properties.Resources.btn_evaluacion },
                 { RrhhBtnNomina, Properties.Resources.btn_nomina },
                 { RrhhBtnCierresNomina, Properties.Resources.btn_cierres },
@@ -358,10 +358,8 @@ namespace CapaVista_Rrhh.Formularios
         {
             var MapaBotonesMDI = new Dictionary<Button, int>
             {
-                { RrhhBtnEmpleados, 0 },
                 { RrhhBtnAsistencia, 0 },
-                { RrhhBtnPermisosVacaciones, 0 },
-                { RrhhBtnCapacitaciones, 0 },
+                { RrhhBtnAsigCapacitacion, 0 },
                 { RrhhBtnEvaluacionDesempeno, 0 },
                 { RrhhBtnNomina, 0 },
                 { RrhhBtnCierresNomina, 0 },
@@ -493,8 +491,8 @@ namespace CapaVista_Rrhh.Formularios
             if (Colapsar)
             {
                 _AnchoNavegador = RrhhPnlNavegador.Width;
-                RrhhPnlNavegador.Width = RrhhBtnEmpleados.Left + RrhhBtnEmpleados.Padding.Left
-                    + RrhhBtnEmpleados.Image.Width + 18;
+                RrhhPnlNavegador.Width = RrhhBtnAsistencia.Left + RrhhBtnAsistencia.Padding.Left
+                    + RrhhBtnAsistencia.Image.Width + 18;
             }
             else
             {
@@ -612,7 +610,7 @@ namespace CapaVista_Rrhh.Formularios
         private void RrhhMetActivarDesplazamiento(bool Activar)
         {
             if (RrhhPnlNavegador.AutoScroll == Activar) return;
-            int Ancho = RrhhBtnEmpleados.Width + (Activar ? -SystemInformation.VerticalScrollBarWidth : SystemInformation.VerticalScrollBarWidth);
+            int Ancho = RrhhBtnAsistencia.Width + (Activar ? -SystemInformation.VerticalScrollBarWidth : SystemInformation.VerticalScrollBarWidth);
             foreach (Control Boton in RrhhPnlNavegador.Controls)
             {
                 if (!(Boton is Button)) continue;
@@ -663,12 +661,6 @@ namespace CapaVista_Rrhh.Formularios
             }
         }
 
-        private void RrhhBtnEmpleados_Click(object sender, EventArgs e)
-        {
-            FrmEmpleados Empleados = new FrmEmpleados();
-            Empleados.ShowDialog(this);
-        }
-
         private void RrhhBtnCierresNomina_Click(object sender, EventArgs e)
         {
             FrmCierreNominas CierreNominas = new FrmCierreNominas();
@@ -681,19 +673,16 @@ namespace CapaVista_Rrhh.Formularios
             Nomina.ShowDialog(this);
         }
 
-        private void RrhhBtnCapacitaciones_Click(object sender, EventArgs e)
+        // Inicio cambio - Byron Alexander Chiquito Paredes - 0901-23-3747
+        // Las ventanas con Navegador de Capacitaciones están en Catálogos; aquí queda la asignación.
+        private void RrhhBtnAsigCapacitacion_Click(object sender, EventArgs e)
         {
-            FrmCapacitacion Capacitacion = new FrmCapacitacion();
-            Capacitacion.ShowDialog(this);
-        }
-
-        private void RrhhBtnPermisosVacaciones_Click(object sender, EventArgs e)
-        {
-            using (var Permisos = new CapaVista_PermisosVacaciones.Formularios.FrmPermisosVacaciones())
+            using (var AsigCapacitacion = new FrmAsigCapacitacion())
             {
-                Permisos.ShowDialog(this);
+                AsigCapacitacion.ShowDialog(this);
             }
         }
+        // Fin cambio - Byron Alexander Chiquito Paredes - 0901-23-3747
 
         private void RrhhBtnEvaluacionDesempeno_Click(object sender, EventArgs e)
         {

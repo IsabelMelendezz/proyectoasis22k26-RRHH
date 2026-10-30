@@ -34,6 +34,9 @@
     <Reference Include="CapaControlador_Rrhh">
       <HintPath>..\CapaControlador_Rrhh\bin\Debug\CapaControlador_Rrhh.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVista_AsigCapacitacion">
+      <HintPath>..\..\AsigCapacitacion\CapaVista_AsigCapacitacion\bin\Debug\CapaVista_AsigCapacitacion.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVista_Asistencia">
       <HintPath>..\..\Asistencia\CapaVista_Asistencia\bin\Debug\CapaVista_Asistencia.dll</HintPath>
     </Reference>

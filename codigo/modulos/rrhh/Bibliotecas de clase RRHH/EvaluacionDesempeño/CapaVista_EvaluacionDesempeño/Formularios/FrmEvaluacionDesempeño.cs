@@ -18,6 +18,8 @@ using System.Windows.Forms;
  * Propósito :
  *  Ventana 9401 - Evaluación de Desempeño
  *  Menú de opciones relacionadas, sin eventos ni lógica.
+ * Modificado por : Byron Alexander Chiquito Paredes 0901-23-3747 (29/10/2026)
+ *  Realizar Evaluación (9402) se abre desde Catálogos en el MDI.
  * ===================================================================
 */
 
@@ -28,12 +30,6 @@ namespace CapaVista_EvaluacionDesempeño.Formularios
         public FrmEvaluacionDesempeño()
         {
             InitializeComponent();
-        }
-
-        private void RrhhBtnAbrirRealizarEvaluacion_Click(object sender, EventArgs e)
-        {
-            FrmRealizarEvaluacion RrhhFrmEvaluacion = new FrmRealizarEvaluacion();
-            RrhhFrmEvaluacion.ShowDialog(this);
         }
 
         private void RrhhBtnAbrirPlanMejora_Click(object sender, EventArgs e)
