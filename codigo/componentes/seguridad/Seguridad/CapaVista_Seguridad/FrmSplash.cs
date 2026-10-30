@@ -1,6 +1,6 @@
 ﻿using CapaControlador_Seguridad.Objetos_de_valor;
 //using CapaVista_Bancos.Formularios;
-//using CapaVista_Rrhh.Formularios;
+using CapaVista_Rrhh.Formularios; // comentar
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,14 +115,14 @@ namespace CapaVista_Seguridad
                         //ClsSesionSeguridad.SeguridadMetRolesComoTexto());
                         //principal = MDIContabilidad;
                         //break;
-
-                    //case "RRHH":
-                        //var MdiRrhh = new FrmMDIRrhh();
-                        //MdiRrhh.RrhhMetActualizarInfoUsuario(
-                        //ClsSesionSeguridad.NombreEmpleado,
-                        //ClsSesionSeguridad.SeguridadMetRolesComoTexto());
-                        //principal = MdiRrhh;
-                        //break;
+                        //comentar
+                    case "RRHH":
+                        var MdiRrhh = new FrmMDIRrhh();
+                        MdiRrhh.RrhhMetActualizarInfoUsuario(
+                        ClsSesionSeguridad.NombreEmpleado,
+                        ClsSesionSeguridad.SeguridadMetRolesComoTexto());
+                        principal = MdiRrhh;
+                        break;
 
                     default:
                         principal = new FrmMDISeguridad();
