@@ -35,13 +35,14 @@
             this.RrhhPblogoAsigC = new System.Windows.Forms.PictureBox();
             this.RrhhPbDonButti = new System.Windows.Forms.PictureBox();
             this.RRHHPnlFondoBase = new System.Windows.Forms.Panel();
+            this.RrhhiBtnLimpiarAsigCap = new System.Windows.Forms.Button();
             this.RrhhiBtnConsultarAsigCap = new System.Windows.Forms.Button();
             this.RrhhiBtnFinAsigCap = new System.Windows.Forms.Button();
             this.RrhhiBtnSiguienteAsigCap = new System.Windows.Forms.Button();
             this.RrhhiBtnAnteriorAsigCap = new System.Windows.Forms.Button();
             this.RrhhiBtnInicioAsigCap = new System.Windows.Forms.Button();
             this.RrhhiBtnReporteAsigCap = new System.Windows.Forms.Button();
-            this.RrhhiBtnImprimirAsigCap = new System.Windows.Forms.Button();
+            this.RrhhiBtnAyudaAsigCap = new System.Windows.Forms.Button();
             this.RrhhiBtnEliminarAsigCap = new System.Windows.Forms.Button();
             this.RrhhiBtnModificarAsigCap = new System.Windows.Forms.Button();
             this.RrhhiBtnGuardarAsigCap = new System.Windows.Forms.Button();
@@ -75,7 +76,7 @@
             this.RrhhPlFondoEncabezado.Controls.Add(this.RrhhPbDonButti);
             this.RrhhPlFondoEncabezado.Location = new System.Drawing.Point(4, 1);
             this.RrhhPlFondoEncabezado.Name = "RrhhPlFondoEncabezado";
-            this.RrhhPlFondoEncabezado.Size = new System.Drawing.Size(1048, 117);
+            this.RrhhPlFondoEncabezado.Size = new System.Drawing.Size(1104, 117);
             this.RrhhPlFondoEncabezado.TabIndex = 1;
             // 
             // RrhhLblDescripTitulo
@@ -117,7 +118,7 @@
             // 
             this.RrhhPbDonButti.BackColor = System.Drawing.Color.Transparent;
             this.RrhhPbDonButti.Image = global::CapaVista_AsigCapacitacion.Properties.Resources._7;
-            this.RrhhPbDonButti.Location = new System.Drawing.Point(875, 12);
+            this.RrhhPbDonButti.Location = new System.Drawing.Point(992, 11);
             this.RrhhPbDonButti.Name = "RrhhPbDonButti";
             this.RrhhPbDonButti.Size = new System.Drawing.Size(99, 102);
             this.RrhhPbDonButti.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -128,13 +129,14 @@
             // 
             this.RRHHPnlFondoBase.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.Pnl_FondoGeneral;
             this.RRHHPnlFondoBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnLimpiarAsigCap);
             this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnConsultarAsigCap);
             this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnFinAsigCap);
             this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnSiguienteAsigCap);
             this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnAnteriorAsigCap);
             this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnInicioAsigCap);
             this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnReporteAsigCap);
-            this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnImprimirAsigCap);
+            this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnAyudaAsigCap);
             this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnEliminarAsigCap);
             this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnModificarAsigCap);
             this.RRHHPnlFondoBase.Controls.Add(this.RrhhiBtnGuardarAsigCap);
@@ -149,108 +151,128 @@
             this.RRHHPnlFondoBase.Controls.Add(this.RrhhDtpFechaAsig);
             this.RRHHPnlFondoBase.Location = new System.Drawing.Point(-16, 109);
             this.RRHHPnlFondoBase.Name = "RRHHPnlFondoBase";
-            this.RRHHPnlFondoBase.Size = new System.Drawing.Size(1083, 592);
+            this.RRHHPnlFondoBase.Size = new System.Drawing.Size(1139, 592);
             this.RRHHPnlFondoBase.TabIndex = 0;
+            // 
+            // RrhhiBtnLimpiarAsigCap
+            // 
+            this.RrhhiBtnLimpiarAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_Limpiar_sin_bordes;
+            this.RrhhiBtnLimpiarAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RrhhiBtnLimpiarAsigCap.Location = new System.Drawing.Point(1013, 32);
+            this.RrhhiBtnLimpiarAsigCap.Name = "RrhhiBtnLimpiarAsigCap";
+            this.RrhhiBtnLimpiarAsigCap.Size = new System.Drawing.Size(93, 86);
+            this.RrhhiBtnLimpiarAsigCap.TabIndex = 19;
+            this.RrhhiBtnLimpiarAsigCap.UseVisualStyleBackColor = true;
+            this.RrhhiBtnLimpiarAsigCap.Click += new System.EventHandler(this.RrhhBtnLimpiar_Click);
             // 
             // RrhhiBtnConsultarAsigCap
             // 
             this.RrhhiBtnConsultarAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_consultar_sin_bordes;
             this.RrhhiBtnConsultarAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhiBtnConsultarAsigCap.Location = new System.Drawing.Point(940, 32);
+            this.RrhhiBtnConsultarAsigCap.Location = new System.Drawing.Point(914, 32);
             this.RrhhiBtnConsultarAsigCap.Name = "RrhhiBtnConsultarAsigCap";
             this.RrhhiBtnConsultarAsigCap.Size = new System.Drawing.Size(93, 86);
             this.RrhhiBtnConsultarAsigCap.TabIndex = 18;
             this.RrhhiBtnConsultarAsigCap.UseVisualStyleBackColor = true;
+            this.RrhhiBtnConsultarAsigCap.Click += new System.EventHandler(this.RrhhBtnConsultar_Click);
             // 
             // RrhhiBtnFinAsigCap
             // 
             this.RrhhiBtnFinAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_fin_sin_bordes_final;
             this.RrhhiBtnFinAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhiBtnFinAsigCap.Location = new System.Drawing.Point(841, 32);
+            this.RrhhiBtnFinAsigCap.Location = new System.Drawing.Point(815, 32);
             this.RrhhiBtnFinAsigCap.Name = "RrhhiBtnFinAsigCap";
             this.RrhhiBtnFinAsigCap.Size = new System.Drawing.Size(93, 86);
             this.RrhhiBtnFinAsigCap.TabIndex = 17;
             this.RrhhiBtnFinAsigCap.UseVisualStyleBackColor = true;
+            this.RrhhiBtnFinAsigCap.Click += new System.EventHandler(this.RrhhBtnFin_Click);
             // 
             // RrhhiBtnSiguienteAsigCap
             // 
             this.RrhhiBtnSiguienteAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_siguiente_sin_bordes;
             this.RrhhiBtnSiguienteAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhiBtnSiguienteAsigCap.Location = new System.Drawing.Point(742, 32);
+            this.RrhhiBtnSiguienteAsigCap.Location = new System.Drawing.Point(716, 32);
             this.RrhhiBtnSiguienteAsigCap.Name = "RrhhiBtnSiguienteAsigCap";
             this.RrhhiBtnSiguienteAsigCap.Size = new System.Drawing.Size(93, 86);
             this.RrhhiBtnSiguienteAsigCap.TabIndex = 16;
             this.RrhhiBtnSiguienteAsigCap.UseVisualStyleBackColor = true;
+            this.RrhhiBtnSiguienteAsigCap.Click += new System.EventHandler(this.RrhhBtnSiguiente_Click);
             // 
             // RrhhiBtnAnteriorAsigCap
             // 
             this.RrhhiBtnAnteriorAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_anterior_sin_bordes;
             this.RrhhiBtnAnteriorAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhiBtnAnteriorAsigCap.Location = new System.Drawing.Point(643, 32);
+            this.RrhhiBtnAnteriorAsigCap.Location = new System.Drawing.Point(617, 32);
             this.RrhhiBtnAnteriorAsigCap.Name = "RrhhiBtnAnteriorAsigCap";
             this.RrhhiBtnAnteriorAsigCap.Size = new System.Drawing.Size(93, 86);
             this.RrhhiBtnAnteriorAsigCap.TabIndex = 15;
             this.RrhhiBtnAnteriorAsigCap.UseVisualStyleBackColor = true;
+            this.RrhhiBtnAnteriorAsigCap.Click += new System.EventHandler(this.RrhhBtnAnterior_Click);
             // 
             // RrhhiBtnInicioAsigCap
             // 
             this.RrhhiBtnInicioAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_inicio_sin_bordes;
             this.RrhhiBtnInicioAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhiBtnInicioAsigCap.Location = new System.Drawing.Point(544, 32);
+            this.RrhhiBtnInicioAsigCap.Location = new System.Drawing.Point(518, 32);
             this.RrhhiBtnInicioAsigCap.Name = "RrhhiBtnInicioAsigCap";
             this.RrhhiBtnInicioAsigCap.Size = new System.Drawing.Size(93, 86);
             this.RrhhiBtnInicioAsigCap.TabIndex = 14;
             this.RrhhiBtnInicioAsigCap.UseVisualStyleBackColor = true;
+            this.RrhhiBtnInicioAsigCap.Click += new System.EventHandler(this.RrhhBtnInicio_Click);
             // 
             // RrhhiBtnReporteAsigCap
             // 
             this.RrhhiBtnReporteAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_reporte_sin_bordes;
             this.RrhhiBtnReporteAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhiBtnReporteAsigCap.Location = new System.Drawing.Point(445, 32);
+            this.RrhhiBtnReporteAsigCap.Location = new System.Drawing.Point(419, 32);
             this.RrhhiBtnReporteAsigCap.Name = "RrhhiBtnReporteAsigCap";
             this.RrhhiBtnReporteAsigCap.Size = new System.Drawing.Size(93, 86);
             this.RrhhiBtnReporteAsigCap.TabIndex = 13;
             this.RrhhiBtnReporteAsigCap.UseVisualStyleBackColor = true;
             // 
-            // RrhhiBtnImprimirAsigCap
+            // RrhhiBtnAyudaAsigCap
             // 
-            this.RrhhiBtnImprimirAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_imprimir_sin_bordes;
-            this.RrhhiBtnImprimirAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhiBtnImprimirAsigCap.Location = new System.Drawing.Point(346, 32);
-            this.RrhhiBtnImprimirAsigCap.Name = "RrhhiBtnImprimirAsigCap";
-            this.RrhhiBtnImprimirAsigCap.Size = new System.Drawing.Size(93, 86);
-            this.RrhhiBtnImprimirAsigCap.TabIndex = 12;
-            this.RrhhiBtnImprimirAsigCap.UseVisualStyleBackColor = true;
+            this.RrhhiBtnAyudaAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_Ayudas_sin_bordes;
+            this.RrhhiBtnAyudaAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RrhhiBtnAyudaAsigCap.Location = new System.Drawing.Point(320, 32);
+            this.RrhhiBtnAyudaAsigCap.Name = "RrhhiBtnAyudaAsigCap";
+            this.RrhhiBtnAyudaAsigCap.Size = new System.Drawing.Size(93, 86);
+            this.RrhhiBtnAyudaAsigCap.TabIndex = 12;
+            this.RrhhiBtnAyudaAsigCap.UseVisualStyleBackColor = true;
+            this.RrhhiBtnAyudaAsigCap.Click += new System.EventHandler(this.RrhhBtnAyuda_Click);
             // 
             // RrhhiBtnEliminarAsigCap
             // 
             this.RrhhiBtnEliminarAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_eliminar_sin_bordes;
             this.RrhhiBtnEliminarAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhiBtnEliminarAsigCap.Location = new System.Drawing.Point(247, 32);
+            this.RrhhiBtnEliminarAsigCap.Location = new System.Drawing.Point(221, 32);
             this.RrhhiBtnEliminarAsigCap.Name = "RrhhiBtnEliminarAsigCap";
             this.RrhhiBtnEliminarAsigCap.Size = new System.Drawing.Size(93, 86);
             this.RrhhiBtnEliminarAsigCap.TabIndex = 11;
             this.RrhhiBtnEliminarAsigCap.UseVisualStyleBackColor = true;
+            this.RrhhiBtnEliminarAsigCap.Click += new System.EventHandler(this.RrhhBtnEliminar_Click);
             // 
             // RrhhiBtnModificarAsigCap
             // 
             this.RrhhiBtnModificarAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_modificar_sin_bordes;
             this.RrhhiBtnModificarAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhiBtnModificarAsigCap.Location = new System.Drawing.Point(148, 32);
+            this.RrhhiBtnModificarAsigCap.Location = new System.Drawing.Point(122, 32);
             this.RrhhiBtnModificarAsigCap.Name = "RrhhiBtnModificarAsigCap";
             this.RrhhiBtnModificarAsigCap.Size = new System.Drawing.Size(93, 86);
             this.RrhhiBtnModificarAsigCap.TabIndex = 10;
             this.RrhhiBtnModificarAsigCap.UseVisualStyleBackColor = true;
+            this.RrhhiBtnModificarAsigCap.Click += new System.EventHandler(this.RrhhBtnModificar_Click);
             // 
             // RrhhiBtnGuardarAsigCap
             // 
             this.RrhhiBtnGuardarAsigCap.BackgroundImage = global::CapaVista_AsigCapacitacion.Properties.Resources.boton_guardar_sin_bordes;
             this.RrhhiBtnGuardarAsigCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhiBtnGuardarAsigCap.Location = new System.Drawing.Point(49, 32);
+            this.RrhhiBtnGuardarAsigCap.Location = new System.Drawing.Point(23, 32);
             this.RrhhiBtnGuardarAsigCap.Name = "RrhhiBtnGuardarAsigCap";
             this.RrhhiBtnGuardarAsigCap.Size = new System.Drawing.Size(93, 86);
             this.RrhhiBtnGuardarAsigCap.TabIndex = 9;
             this.RrhhiBtnGuardarAsigCap.UseVisualStyleBackColor = true;
+            this.RrhhiBtnGuardarAsigCap.Click += new System.EventHandler(this.RrhhBtnGuardar_Click);
             // 
             // RrhhDgvAsigCapacitacion
             // 
@@ -260,8 +282,9 @@
             this.RrhhDgvAsigCapacitacion.Name = "RrhhDgvAsigCapacitacion";
             this.RrhhDgvAsigCapacitacion.RowHeadersWidth = 51;
             this.RrhhDgvAsigCapacitacion.RowTemplate.Height = 24;
-            this.RrhhDgvAsigCapacitacion.Size = new System.Drawing.Size(1020, 227);
+            this.RrhhDgvAsigCapacitacion.Size = new System.Drawing.Size(1076, 227);
             this.RrhhDgvAsigCapacitacion.TabIndex = 8;
+            this.RrhhDgvAsigCapacitacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RrhhDgvAsignacion_CellClick);
             // 
             // RrhhPlAsigRe
             // 
@@ -269,7 +292,7 @@
             this.RrhhPlAsigRe.Controls.Add(this.RrhhLblAsigRe);
             this.RrhhPlAsigRe.Location = new System.Drawing.Point(21, 278);
             this.RrhhPlAsigRe.Name = "RrhhPlAsigRe";
-            this.RrhhPlAsigRe.Size = new System.Drawing.Size(1039, 48);
+            this.RrhhPlAsigRe.Size = new System.Drawing.Size(1095, 48);
             this.RrhhPlAsigRe.TabIndex = 7;
             // 
             // RrhhLblAsigRe
@@ -291,7 +314,7 @@
             this.RrhhPlDatosA.Controls.Add(this.RrhhLblDatosA);
             this.RrhhPlDatosA.Location = new System.Drawing.Point(21, 124);
             this.RrhhPlDatosA.Name = "RrhhPlDatosA";
-            this.RrhhPlDatosA.Size = new System.Drawing.Size(1039, 44);
+            this.RrhhPlDatosA.Size = new System.Drawing.Size(1095, 44);
             this.RrhhPlDatosA.TabIndex = 6;
             // 
             // RrhhLblDatosA
@@ -367,7 +390,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1051, 692);
+            this.ClientSize = new System.Drawing.Size(1107, 692);
             this.Controls.Add(this.RrhhPlFondoEncabezado);
             this.Controls.Add(this.RRHHPnlFondoBase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -414,12 +437,13 @@
         private System.Windows.Forms.Button RrhhiBtnGuardarAsigCap;
         private System.Windows.Forms.Button RrhhiBtnModificarAsigCap;
         private System.Windows.Forms.Button RrhhiBtnEliminarAsigCap;
-        private System.Windows.Forms.Button RrhhiBtnImprimirAsigCap;
+        private System.Windows.Forms.Button RrhhiBtnAyudaAsigCap;
         private System.Windows.Forms.Button RrhhiBtnReporteAsigCap;
         private System.Windows.Forms.Button RrhhiBtnInicioAsigCap;
         private System.Windows.Forms.Button RrhhiBtnAnteriorAsigCap;
         private System.Windows.Forms.Button RrhhiBtnSiguienteAsigCap;
         private System.Windows.Forms.Button RrhhiBtnFinAsigCap;
         private System.Windows.Forms.Button RrhhiBtnConsultarAsigCap;
+        private System.Windows.Forms.Button RrhhiBtnLimpiarAsigCap;
     }
 }
