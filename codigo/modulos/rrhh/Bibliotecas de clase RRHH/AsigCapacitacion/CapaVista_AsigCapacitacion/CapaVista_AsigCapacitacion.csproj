@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaControlador_AsigCapacitacion">
+      <HintPath>..\CapaControlador_AsigCapacitacion\bin\Debug\CapaControlador_AsigCapacitacion.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaControlador_Seguridad">
+      <HintPath>..\..\..\..\..\componentes\seguridad\Seguridad\CapaControlador_Seguridad\bin\Debug\CapaControlador_Seguridad.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -108,6 +114,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\boton_consultar_sin_bordes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\..\..\..\componentes\seguridad\Seguridad\CapaControlador_Seguridad\bin\Debug\CapaControlador_Seguridad.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_Ayudas_sin_bordes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_Limpiar_sin_bordes.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
