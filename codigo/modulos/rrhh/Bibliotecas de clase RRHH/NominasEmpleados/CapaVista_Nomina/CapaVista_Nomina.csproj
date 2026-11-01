@@ -35,6 +35,7 @@
       <HintPath>..\CapaControlador_Nomina\bin\Debug\CapaControlador_Nomina.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -46,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ayudas\ClsValidacionDatos.cs" />
     <Compile Include="Formularios\FrmNominaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,9 +85,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Ayudas\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Formularios\FrmNominaEmpleado.resx">
       <DependentUpon>FrmNominaEmpleado.cs</DependentUpon>
