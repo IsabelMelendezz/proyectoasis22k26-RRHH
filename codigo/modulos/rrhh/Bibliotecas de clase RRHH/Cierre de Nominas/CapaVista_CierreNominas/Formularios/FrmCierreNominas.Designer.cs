@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCierreNominas));
             this.RrhhDgvVistaCierreNomina = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Deducciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RrhhPnlInicio = new System.Windows.Forms.Panel();
             this.RrhhPbIconoMascota = new System.Windows.Forms.PictureBox();
             this.RrhhPbIconoCierreNominas = new System.Windows.Forms.PictureBox();
@@ -97,48 +92,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RrhhDgvVistaCierreNomina.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.RrhhDgvVistaCierreNomina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RrhhDgvVistaCierreNomina.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Empleado,
-            this.Column2,
-            this.Deducciones,
-            this.Column3});
             this.RrhhDgvVistaCierreNomina.Location = new System.Drawing.Point(55, 541);
             this.RrhhDgvVistaCierreNomina.Name = "RrhhDgvVistaCierreNomina";
             this.RrhhDgvVistaCierreNomina.RowHeadersWidth = 51;
             this.RrhhDgvVistaCierreNomina.RowTemplate.Height = 24;
             this.RrhhDgvVistaCierreNomina.Size = new System.Drawing.Size(1296, 211);
             this.RrhhDgvVistaCierreNomina.TabIndex = 33;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Empleado
-            // 
-            this.Empleado.HeaderText = "Empleado";
-            this.Empleado.MinimumWidth = 6;
-            this.Empleado.Name = "Empleado";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Percepciones";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Deducciones
-            // 
-            this.Deducciones.HeaderText = "Deducciones";
-            this.Deducciones.MinimumWidth = 6;
-            this.Deducciones.Name = "Deducciones";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Verificacion";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
             // 
             // RrhhPnlInicio
             // 
@@ -630,10 +589,5 @@
         private System.Windows.Forms.PictureBox RrhhPbTotalDeducciones;
         private System.Windows.Forms.PictureBox RrhhPbVerificacionCierre;
         private System.Windows.Forms.PictureBox RrhhPbSalarioLiquido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Deducciones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
