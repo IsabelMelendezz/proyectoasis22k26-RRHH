@@ -159,6 +159,47 @@ namespace MSTestEvaluacionDesempeno
         }
 
         [TestMethod]
+        public void RrhhFuncCalcularPuntaje_NotasValidas_CalculaPonderado()
+        {
+            // Arrange
+            var Controlador = new ClsModeloRealizarEvaluacion();
+
+            // Act: 5*0.25 + 4*0.25 + 4*0.20 + 5*0.15 + 3*0.15 = 4.25
+            decimal? Puntaje = Controlador.RrhhFuncCalcularPuntaje(new int?[] { 5, 4, 4, 5, 3 });
+
+            // Assert
+            Assert.AreEqual(4.25m, Puntaje);
+        }
+
+        [DataTestMethod]
+        [DataRow(0)]
+        [DataRow(6)]
+        public void RrhhFuncCalcularPuntaje_NotaFueraDeRango_DevuelveNulo(int NotaInvalida)
+        {
+            // Arrange
+            var Controlador = new ClsModeloRealizarEvaluacion();
+
+            // Act
+            decimal? Puntaje = Controlador.RrhhFuncCalcularPuntaje(new int?[] { 5, 4, NotaInvalida, 5, 3 });
+
+            // Assert
+            Assert.IsNull(Puntaje);
+        }
+
+        [TestMethod]
+        public void RrhhFuncCalcularPuntaje_FaltaUnaNota_DevuelveNulo()
+        {
+            // Arrange
+            var Controlador = new ClsModeloRealizarEvaluacion();
+
+            // Act
+            decimal? Puntaje = Controlador.RrhhFuncCalcularPuntaje(new int?[] { 5, 4, null, 5, 3 });
+
+            // Assert
+            Assert.IsNull(Puntaje);
+        }
+
+        [TestMethod]
         public void DetalleEvaluacion_AlAsignarPesoYNota_CalculaPonderado()
         {
             // Arrange & Act

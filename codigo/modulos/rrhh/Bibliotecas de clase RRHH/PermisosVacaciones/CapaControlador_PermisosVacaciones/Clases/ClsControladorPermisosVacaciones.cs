@@ -72,6 +72,12 @@ namespace CapaControlador_PermisosVacaciones.Clases
             return _Sentencias.RrhhFuncFechasVacaciones();
         }
 
+        // Días calendario del permiso (fin - inicio + 1); 0 si la fecha fin es anterior a la de inicio.
+        public int RrhhFuncDiasPermiso(DateTime Inicio, DateTime Fin)
+        {
+            return Fin.Date < Inicio.Date ? 0 : (Fin.Date - Inicio.Date).Days + 1;
+        }
+
         // Días de lunes a viernes entre las dos fechas, incluyendo ambas.
         public int RrhhFuncDiasHabiles(DateTime Inicio, DateTime Fin)
         {

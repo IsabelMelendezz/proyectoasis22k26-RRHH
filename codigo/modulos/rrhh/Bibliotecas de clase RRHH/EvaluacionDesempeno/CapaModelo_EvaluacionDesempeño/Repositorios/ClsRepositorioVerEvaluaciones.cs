@@ -22,7 +22,7 @@ namespace CapaModelo_EvaluacionDesempeño.Repositorios
 {
     public class ClsRepositorioVerEvaluaciones : ClsSentencias, IRepositorioVerEvaluaciones
     {
-        // Aspectos evaluados: columna, nombre y peso (los mismos del trigger del puntaje).
+        // Aspectos evaluados: columna, nombre y peso (los mismos de _PuntajeCalculado).
         private static readonly Tuple<string, string, decimal>[] _Aspectos =
         {
             Tuple.Create("calidadEvaluacionDesempeno", "Calidad del trabajo", 0.25m),
@@ -34,6 +34,7 @@ namespace CapaModelo_EvaluacionDesempeño.Repositorios
 
         private const string _SelectEvaluaciones = @"
             SELECT e.*,
+                   " + _PuntajeCalculado + @" AS puntajeCalculado,
                    CONCAT(em.nombresEmpleado, ' ', em.apellidosEmpleado) AS nombreColaborador,
                    CONCAT(ev.nombresEmpleado, ' ', ev.apellidosEmpleado) AS nombreEvaluador,
                    pu.nombrePuesto,
@@ -62,7 +63,7 @@ namespace CapaModelo_EvaluacionDesempeño.Repositorios
                     NombreColaborador = Fila["nombreColaborador"].ToString(),
                     NombrePuesto = Fila["nombrePuesto"] == DBNull.Value ? "Sin puesto asignado" : Fila["nombrePuesto"].ToString(),
                     NombreEvaluador = Fila["nombreEvaluador"].ToString(),
-                    PuntajeEvaluacionDesempeno = Fila["puntajeEvaluacionDesempeno"] == DBNull.Value ? 0 : Convert.ToDecimal(Fila["puntajeEvaluacionDesempeno"]),
+                    PuntajeEvaluacionDesempeno = Convert.ToDecimal(Fila["puntajeCalculado"]),
                     NombrePlanMejora = Fila["nombrePlanMejora"] == DBNull.Value ? null : Fila["nombrePlanMejora"].ToString(),
                     DescripcionPlanMejora = Fila["descripcionPlanMejora"] == DBNull.Value ? null : Fila["descripcionPlanMejora"].ToString()
                 };

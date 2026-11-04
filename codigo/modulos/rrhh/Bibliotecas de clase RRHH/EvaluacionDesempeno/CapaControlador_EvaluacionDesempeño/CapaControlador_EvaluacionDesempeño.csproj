@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\ClsModeloPlanMejora.cs" />
+    <Compile Include="Controladores\ClsModeloRealizarEvaluacion.cs" />
     <Compile Include="Controladores\ClsModeloVerEvaluaciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

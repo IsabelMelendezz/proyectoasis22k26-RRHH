@@ -19,6 +19,13 @@ namespace CapaModelo_EvaluacionDesempeño.Repositorios
 {
     public class ClsSentencias : ClsConexion
     {
+        // Puntaje (sobre 5.00) calculado con las 5 notas de la evaluación (alias "e" en las consultas).
+        // Se calcula al consultar porque la BD no tiene trigger que lo guarde.
+        protected const string _PuntajeCalculado =
+            @"ROUND(e.calidadEvaluacionDesempeno * 0.25 + e.productividadEvaluacionDesempeno * 0.25
+                  + e.trabajoEquipoEvaluacionDesempeno * 0.20 + e.puntualidadEvaluacionDesempeno * 0.15
+                  + e.iniciativaEvaluacionDesempeno * 0.15, 2)";
+
         public DataTable RrhhMetEjecucionConsulta(string Consulta, params object[] Valores)
         {
             var Tabla = new DataTable();

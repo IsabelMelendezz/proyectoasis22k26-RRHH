@@ -35,7 +35,7 @@
             // 
             // RrhhNavVacaciones
             // 
-            this.RrhhNavVacaciones.Location = new System.Drawing.Point(12, 46);
+            this.RrhhNavVacaciones.Location = new System.Drawing.Point(12, 77);
             this.RrhhNavVacaciones.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.RrhhNavVacaciones.Name = "RrhhNavVacaciones";
             this.RrhhNavVacaciones.Size = new System.Drawing.Size(1614, 134);

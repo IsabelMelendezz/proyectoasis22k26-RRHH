@@ -94,7 +94,7 @@ namespace CapaModelo_EvaluacionDesempeño.Repositorios
             return RrhhMetEjecucionConsulta(
                 @"SELECT e.idEvaluacionDesempeno,
                          CONCAT(DATE_FORMAT(e.fechaEvaluacionDesempeno, '%d/%m/%Y'),
-                                ' - Puntaje ', e.puntajeEvaluacionDesempeno) AS descripcionEvaluacion
+                                ' - Puntaje ', " + _PuntajeCalculado + @") AS descripcionEvaluacion
                   FROM tblEvaluacionDesempeno e
                   WHERE e.idEmpleado = ?
                     AND e.is_active = 1

@@ -34,7 +34,7 @@
             // 
             // RrhhNavPermisos
             // 
-            this.RrhhNavPermisos.Location = new System.Drawing.Point(12, 43);
+            this.RrhhNavPermisos.Location = new System.Drawing.Point(12, 36);
             this.RrhhNavPermisos.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.RrhhNavPermisos.Name = "RrhhNavPermisos";
             this.RrhhNavPermisos.Size = new System.Drawing.Size(1614, 134);

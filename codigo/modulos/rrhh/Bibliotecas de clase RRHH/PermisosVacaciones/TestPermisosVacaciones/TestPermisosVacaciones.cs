@@ -80,6 +80,22 @@ namespace MSTestPermisosVacaciones
             Assert.AreEqual(Esperado, Dias);
         }
 
+        [DataTestMethod]
+        [DataRow("2026-11-02", "2026-11-02", 1)]   // un solo día
+        [DataRow("2026-11-02", "2026-11-08", 7)]   // semana completa: cuenta fines de semana
+        [DataRow("2026-11-06", "2026-11-02", 0)]   // fecha fin anterior a la de inicio
+        public void RrhhFuncDiasPermiso_SegunRango_CuentaDiasCalendario(string Inicio, string Fin, int Esperado)
+        {
+            // Arrange
+            var Controlador = new ClsControladorPermisosVacaciones();
+
+            // Act
+            int Dias = Controlador.RrhhFuncDiasPermiso(DateTime.Parse(Inicio), DateTime.Parse(Fin));
+
+            // Assert
+            Assert.AreEqual(Esperado, Dias);
+        }
+
         // ==========================================
         // 3. PRUEBAS DE VALIDACIÓN DE VACACIONES
         // ==========================================
