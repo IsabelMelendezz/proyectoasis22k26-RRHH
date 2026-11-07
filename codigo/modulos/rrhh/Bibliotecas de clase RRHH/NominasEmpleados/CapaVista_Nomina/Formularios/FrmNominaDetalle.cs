@@ -1,4 +1,20 @@
-﻿using CapaControlador_Nomina.Modelos_de_controladores;
+﻿/*
+ * ==================================================================
+ * Área : Rrhh
+ * Autor : Cristian David Sipac Ispache
+ * Carné : 9959-23-1567
+ * Fecha : 06/11/2026
+ * ==================================================================
+ * Propósito :
+ *  Permite seleccionar una nómina no rechazada para consultar
+ *  sus importes guardados y el desglose de conceptos.
+ *  Identifica las nóminas sin detalle y permite solicitar
+ *  su generación, buscar conceptos, navegar entre nóminas,
+ *  actualizar la información y abrir el reporte de detalles.
+ * ==================================================================
+ */
+
+using CapaControlador_Nomina.Modelos_de_controladores;
 using CapaVista_Nomina.Reportes;
 using System;
 using System.Collections.Generic;

@@ -404,7 +404,7 @@
             this.RrhhDgvListaNominaEncabezado.Name = "RrhhDgvListaNominaEncabezado";
             this.RrhhDgvListaNominaEncabezado.RowHeadersWidth = 51;
             this.RrhhDgvListaNominaEncabezado.RowTemplate.Height = 24;
-            this.RrhhDgvListaNominaEncabezado.Size = new System.Drawing.Size(1511, 293);
+            this.RrhhDgvListaNominaEncabezado.Size = new System.Drawing.Size(1511, 227);
             this.RrhhDgvListaNominaEncabezado.TabIndex = 15;
             this.RrhhDgvListaNominaEncabezado.SelectionChanged += new System.EventHandler(this.RrhhDgvListaNominaEncabezado_SelectionChanged);
             // 

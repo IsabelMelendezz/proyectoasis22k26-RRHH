@@ -1,4 +1,19 @@
-﻿using System;
+﻿/*
+ * ==================================================================
+ * Área : Rrhh
+ * Autor : Cristian David Sipac Ispache
+ * Carné : 9959-23-1567
+ * Fecha : 06/11/2026
+ * ==================================================================
+ * Propósito :
+ *  Valida las propiedades de un modelo mediante sus atributos
+ *  de DataAnnotations. Reúne los errores encontrados y los
+ *  muestra en un mensaje de advertencia, devolviendo si los
+ *  datos cumplen las validaciones definidas.
+ * ==================================================================
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

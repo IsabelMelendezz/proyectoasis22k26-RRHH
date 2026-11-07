@@ -1,4 +1,20 @@
-﻿using CapaControlador_Nomina.Modelos_de_controladores;
+﻿/*
+ * ==================================================================
+ * Área : Rrhh
+ * Autor : Cristian David Sipac Ispache
+ * Carné : 9959-23-1567
+ * Fecha : 06/11/2026
+ * ==================================================================
+ * Propósito :
+ *  Permite administrar el catálogo de percepciones y deducciones,
+ *  definiendo nombre, período, efecto, tipo de cálculo, valor,
+ *  aplicación y estado activo. Facilita agregar, modificar,
+ *  eliminar, buscar y navegar entre conceptos, además
+ *  de abrir su reporte.
+ * ==================================================================
+ */
+
+using CapaControlador_Nomina.Modelos_de_controladores;
 using CapaControlador_Nomina.ObjetosdeValor;
 using CapaVista_Nomina.Ayudas;
 using CapaVista_Nomina.Reportes;

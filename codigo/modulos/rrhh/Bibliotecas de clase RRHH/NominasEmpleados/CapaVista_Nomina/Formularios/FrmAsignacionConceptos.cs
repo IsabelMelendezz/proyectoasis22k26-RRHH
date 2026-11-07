@@ -1,4 +1,20 @@
-﻿using CapaControlador_Nomina.Modelos_de_controladores;
+﻿/*
+ * ==================================================================
+ * Área : Rrhh
+ * Autor : Cristian David Sipac Ispache
+ * Carné : 9959-23-1567
+ * Fecha : 06/11/2026
+ * ==================================================================
+ * Propósito :
+ *  Permite asignar conceptos de aplicación Algunos a un empleado
+ *  o departamento. Controla la selección del destino y permite
+ *  registrar, modificar, eliminar, buscar y navegar entre
+ *  asignaciones, mostrando sus nombres en el listado
+ *  y permitiendo abrir el reporte correspondiente.
+ * ==================================================================
+ */
+
+using CapaControlador_Nomina.Modelos_de_controladores;
 using CapaControlador_Nomina.ObjetosdeValor;
 using CapaVista_Nomina.Ayudas;
 using CapaVista_Nomina.Reportes;

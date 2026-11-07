@@ -1,4 +1,20 @@
-﻿using CapaControlador_Nomina.Modelos_de_controladores;
+﻿/*
+ * ==================================================================
+ * Área : Rrhh
+ * Autor : Cristian David Sipac Ispache
+ * Carné : 9959-23-1567
+ * Fecha : 06/11/2026
+ * ==================================================================
+ * Propósito :
+ *  Permite seleccionar un empleado y período para calcular
+ *  y guardar su nómina, mostrando los importes en solo lectura.
+ *  También permite consultar, buscar y navegar entre nóminas,
+ *  modificar su estado y abrir las ventanas de asignaciones,
+ *  detalle y reporte.
+ * ==================================================================
+ */
+
+using CapaControlador_Nomina.Modelos_de_controladores;
 using CapaControlador_Nomina.ObjetosdeValor;
 using CapaVista_Nomina.Ayudas;
 using CapaVista_Nomina.Reportes;

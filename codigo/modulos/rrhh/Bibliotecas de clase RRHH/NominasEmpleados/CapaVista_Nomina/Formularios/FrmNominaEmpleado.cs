@@ -1,4 +1,19 @@
-﻿using System;
+﻿/*
+ * ==================================================================
+ * Área : Rrhh
+ * Autor : Cristian David Sipac Ispache
+ * Carné : 9959-23-1567
+ * Fecha : 06/11/2026
+ * ==================================================================
+ * Propósito :
+ *  Presenta una ventana de acceso al módulo de nómina.
+ *  Permite abrir mediante botones los formularios de
+ *  percepciones y deducciones y de encabezados de nómina
+ *  como ventanas de diálogo.
+ * ==================================================================
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +23,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaVista_Nomina.Formularios;
+using CapaControlador_Seguridad;
+using CapaControlador_Seguridad.Objetos_de_valor;
+
 
 namespace CapaVista_Nomina.Formularios
 {
     public partial class FrmNominaEmpleado : Form
     {
+        private const int ID_MODULO = 9000;
+        private const int ID_APLICACION = 9501;
         public FrmNominaEmpleado()
         {
             InitializeComponent();

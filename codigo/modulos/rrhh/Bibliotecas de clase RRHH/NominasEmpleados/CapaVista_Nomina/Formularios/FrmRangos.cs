@@ -1,4 +1,20 @@
-﻿using CapaControlador_Nomina.Modelos_de_controladores;
+﻿/*
+ * ==================================================================
+ * Área : Rrhh
+ * Autor : Cristian David Sipac Ispache
+ * Carné : 9959-23-1567
+ * Fecha : 06/11/2026
+ * ==================================================================
+ * Propósito :
+ *  Permite administrar los rangos salariales de conceptos
+ *  de tipo Tabla, definiendo límites, modo de cálculo, valor
+ *  y monto fijo base. Facilita agregar, modificar, eliminar,
+ *  buscar y navegar entre rangos, admitir un límite superior
+ *  vacío y abrir el reporte correspondiente.
+ * ==================================================================
+ */
+
+using CapaControlador_Nomina.Modelos_de_controladores;
 using CapaControlador_Nomina.ObjetosdeValor;
 using CapaVista_Nomina.Ayudas;
 using CapaVista_Nomina.Reportes;

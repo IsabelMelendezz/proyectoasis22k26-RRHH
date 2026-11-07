@@ -1,4 +1,19 @@
-﻿using CapaControlador_Nomina.Modelos_de_controladores;
+﻿/*
+ * ==================================================================
+ * Área : Rrhh
+ * Autor : Cristian David Sipac Ispache
+ * Carné : 9959-23-1567
+ * Fecha : 06/11/2026
+ * ==================================================================
+ * Propósito :
+ *  Presenta el reporte de encabezados de nómina mediante
+ *  ReportViewer. Obtiene los registros desde el controlador,
+ *  los vincula al origen DsNominaEncabezado y carga
+ *  el diseño RDLC del reporte para su visualización.
+ * ==================================================================
+ */
+
+using CapaControlador_Nomina.Modelos_de_controladores;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
