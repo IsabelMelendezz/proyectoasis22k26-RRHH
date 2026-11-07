@@ -46,6 +46,36 @@
             this.RrhhDtvLiquidacionDetalle = new System.Windows.Forms.DataGridView();
             this.RrhhDtvConceptos = new System.Windows.Forms.DataGridView();
             this.RrhhPnlContenidoLiqui = new System.Windows.Forms.Panel();
+            this.RrhhCbEstado = new System.Windows.Forms.CheckBox();
+            this.RrhhLblEstado = new System.Windows.Forms.Label();
+            this.RrhhDtpFechaAprobacion = new System.Windows.Forms.DateTimePicker();
+            this.RrhhLblFechaAprueba = new System.Windows.Forms.Label();
+            this.RrhhTxtUsuAprueba = new System.Windows.Forms.TextBox();
+            this.RrhhLblUsuAprueba = new System.Windows.Forms.Label();
+            this.RrhhTxtUsuCre = new System.Windows.Forms.TextBox();
+            this.RrhhLblUsuCrea = new System.Windows.Forms.Label();
+            this.RrhhTxtMontoLetras = new System.Windows.Forms.TextBox();
+            this.RrhhLblMontoLetras = new System.Windows.Forms.Label();
+            this.RrhhDtpFechaEmision = new System.Windows.Forms.DateTimePicker();
+            this.RrhhLblFechaEmision = new System.Windows.Forms.Label();
+            this.RrhhTxtNoFiniquito = new System.Windows.Forms.TextBox();
+            this.RrhhLblNoFiniquito = new System.Windows.Forms.Label();
+            this.RrhhTxtTotalNeto = new System.Windows.Forms.TextBox();
+            this.RrhhLblTotalNeto = new System.Windows.Forms.Label();
+            this.RrhhTxtTotalDeducciones = new System.Windows.Forms.TextBox();
+            this.RrhhLblTotalDeducciones = new System.Windows.Forms.Label();
+            this.RrhhTxtTotalPercepciones = new System.Windows.Forms.TextBox();
+            this.RrhhLblTotalPercepciones = new System.Windows.Forms.Label();
+            this.RrhhTxtSalarioPromedio = new System.Windows.Forms.TextBox();
+            this.RrhhLblSalarioPromedio = new System.Windows.Forms.Label();
+            this.RrhhTxtMotivoBaja = new System.Windows.Forms.TextBox();
+            this.RrhhLblMotivoBaja = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RrhhCboEmpresa = new System.Windows.Forms.ComboBox();
+            this.RrhhLblEmpresa = new System.Windows.Forms.Label();
+            this.RrhhTxtIdLiquidacion = new System.Windows.Forms.TextBox();
+            this.RrhhLblIdLiquidacion = new System.Windows.Forms.Label();
             this.RrhhDtpFechaIngresoEmp = new System.Windows.Forms.DateTimePicker();
             this.RrhhCboEstadoLiqui = new System.Windows.Forms.ComboBox();
             this.RrhhTxtDiasLaborados = new System.Windows.Forms.TextBox();
@@ -78,6 +108,7 @@
             this.RrhhBtnEliminarLiqui = new System.Windows.Forms.Button();
             this.RrhhBtnModificarLiqui = new System.Windows.Forms.Button();
             this.RrhhiBtnGuardarLiqui = new System.Windows.Forms.Button();
+            this.RrhhLblAnuncio = new System.Windows.Forms.Label();
             this.RrhhPnlPrincipal.SuspendLayout();
             this.RrhhPnlContenedorCatalogos.SuspendLayout();
             this.RrhhPnlBajEmpleado.SuspendLayout();
@@ -94,6 +125,7 @@
             // RrhhPnlPrincipal
             // 
             this.RrhhPnlPrincipal.BackgroundImage = global::CapaVista_Liquidacion_Rrhh.Properties.Resources.fondo_dashboard;
+            this.RrhhPnlPrincipal.Controls.Add(this.RrhhLblAnuncio);
             this.RrhhPnlPrincipal.Controls.Add(this.RrhhPnlContenedorCatalogos);
             this.RrhhPnlPrincipal.Controls.Add(this.RrhhLblLiquidacionDetalle);
             this.RrhhPnlPrincipal.Controls.Add(this.RrhhLblConceptos);
@@ -124,7 +156,7 @@
             this.RrhhPnlContenedorCatalogos.Controls.Add(this.RrhhPnlBajEmpleado);
             this.RrhhPnlContenedorCatalogos.Controls.Add(this.RrhhPnlParametroLey);
             this.RrhhPnlContenedorCatalogos.Controls.Add(this.RrhhPnlMotivoBaja);
-            this.RrhhPnlContenedorCatalogos.Location = new System.Drawing.Point(864, 195);
+            this.RrhhPnlContenedorCatalogos.Location = new System.Drawing.Point(856, 512);
             this.RrhhPnlContenedorCatalogos.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhPnlContenedorCatalogos.Name = "RrhhPnlContenedorCatalogos";
             this.RrhhPnlContenedorCatalogos.Size = new System.Drawing.Size(246, 260);
@@ -139,9 +171,9 @@
             this.RrhhLblCatalogo.Location = new System.Drawing.Point(78, 6);
             this.RrhhLblCatalogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblCatalogo.Name = "RrhhLblCatalogo";
-            this.RrhhLblCatalogo.Size = new System.Drawing.Size(98, 22);
+            this.RrhhLblCatalogo.Size = new System.Drawing.Size(103, 22);
             this.RrhhLblCatalogo.TabIndex = 5;
-            this.RrhhLblCatalogo.Text = "Catalogos";
+            this.RrhhLblCatalogo.Text = "Catalogos ";
             // 
             // RrhhPnlBajEmpleado
             // 
@@ -233,7 +265,7 @@
             this.RrhhPnlMotivoBaja.Location = new System.Drawing.Point(30, 39);
             this.RrhhPnlMotivoBaja.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhPnlMotivoBaja.Name = "RrhhPnlMotivoBaja";
-            this.RrhhPnlMotivoBaja.Size = new System.Drawing.Size(180, 58);
+            this.RrhhPnlMotivoBaja.Size = new System.Drawing.Size(194, 58);
             this.RrhhPnlMotivoBaja.TabIndex = 21;
             // 
             // RrhhBtnCatalogoMotivoBaja
@@ -314,6 +346,36 @@
             // RrhhPnlContenidoLiqui
             // 
             this.RrhhPnlContenidoLiqui.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhCbEstado);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblEstado);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhDtpFechaAprobacion);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblFechaAprueba);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhTxtUsuAprueba);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblUsuAprueba);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhTxtUsuCre);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblUsuCrea);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhTxtMontoLetras);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblMontoLetras);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhDtpFechaEmision);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblFechaEmision);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhTxtNoFiniquito);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblNoFiniquito);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhTxtTotalNeto);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblTotalNeto);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhTxtTotalDeducciones);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblTotalDeducciones);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhTxtTotalPercepciones);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblTotalPercepciones);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhTxtSalarioPromedio);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblSalarioPromedio);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhTxtMotivoBaja);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblMotivoBaja);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.comboBox1);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.label1);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhCboEmpresa);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblEmpresa);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhTxtIdLiquidacion);
+            this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhLblIdLiquidacion);
             this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhDtpFechaIngresoEmp);
             this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhCboEstadoLiqui);
             this.RrhhPnlContenidoLiqui.Controls.Add(this.RrhhTxtDiasLaborados);
@@ -335,15 +397,337 @@
             this.RrhhPnlContenidoLiqui.Location = new System.Drawing.Point(6, 195);
             this.RrhhPnlContenidoLiqui.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhPnlContenidoLiqui.Name = "RrhhPnlContenidoLiqui";
-            this.RrhhPnlContenidoLiqui.Size = new System.Drawing.Size(792, 228);
+            this.RrhhPnlContenidoLiqui.Size = new System.Drawing.Size(1082, 277);
             this.RrhhPnlContenidoLiqui.TabIndex = 11;
+            // 
+            // RrhhCbEstado
+            // 
+            this.RrhhCbEstado.AutoSize = true;
+            this.RrhhCbEstado.Checked = true;
+            this.RrhhCbEstado.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.RrhhCbEstado.Location = new System.Drawing.Point(912, 256);
+            this.RrhhCbEstado.Name = "RrhhCbEstado";
+            this.RrhhCbEstado.Size = new System.Drawing.Size(15, 14);
+            this.RrhhCbEstado.TabIndex = 50;
+            this.RrhhCbEstado.UseVisualStyleBackColor = true;
+            // 
+            // RrhhLblEstado
+            // 
+            this.RrhhLblEstado.AutoSize = true;
+            this.RrhhLblEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblEstado.Location = new System.Drawing.Point(760, 256);
+            this.RrhhLblEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblEstado.Name = "RrhhLblEstado";
+            this.RrhhLblEstado.Size = new System.Drawing.Size(49, 19);
+            this.RrhhLblEstado.TabIndex = 49;
+            this.RrhhLblEstado.Text = "Activo";
+            // 
+            // RrhhDtpFechaAprobacion
+            // 
+            this.RrhhDtpFechaAprobacion.CustomFormat = " dd/MM/yyyy";
+            this.RrhhDtpFechaAprobacion.Enabled = false;
+            this.RrhhDtpFechaAprobacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.RrhhDtpFechaAprobacion.Location = new System.Drawing.Point(912, 224);
+            this.RrhhDtpFechaAprobacion.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhDtpFechaAprobacion.Name = "RrhhDtpFechaAprobacion";
+            this.RrhhDtpFechaAprobacion.Size = new System.Drawing.Size(151, 20);
+            this.RrhhDtpFechaAprobacion.TabIndex = 48;
+            // 
+            // RrhhLblFechaAprueba
+            // 
+            this.RrhhLblFechaAprueba.AutoSize = true;
+            this.RrhhLblFechaAprueba.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblFechaAprueba.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblFechaAprueba.Location = new System.Drawing.Point(760, 224);
+            this.RrhhLblFechaAprueba.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblFechaAprueba.Name = "RrhhLblFechaAprueba";
+            this.RrhhLblFechaAprueba.Size = new System.Drawing.Size(138, 19);
+            this.RrhhLblFechaAprueba.TabIndex = 47;
+            this.RrhhLblFechaAprueba.Text = "Fecha de aprobacion";
+            // 
+            // RrhhTxtUsuAprueba
+            // 
+            this.RrhhTxtUsuAprueba.Enabled = false;
+            this.RrhhTxtUsuAprueba.Location = new System.Drawing.Point(912, 192);
+            this.RrhhTxtUsuAprueba.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhTxtUsuAprueba.Name = "RrhhTxtUsuAprueba";
+            this.RrhhTxtUsuAprueba.Size = new System.Drawing.Size(142, 20);
+            this.RrhhTxtUsuAprueba.TabIndex = 46;
+            // 
+            // RrhhLblUsuAprueba
+            // 
+            this.RrhhLblUsuAprueba.AutoSize = true;
+            this.RrhhLblUsuAprueba.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblUsuAprueba.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblUsuAprueba.Location = new System.Drawing.Point(762, 192);
+            this.RrhhLblUsuAprueba.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblUsuAprueba.Name = "RrhhLblUsuAprueba";
+            this.RrhhLblUsuAprueba.Size = new System.Drawing.Size(111, 19);
+            this.RrhhLblUsuAprueba.TabIndex = 45;
+            this.RrhhLblUsuAprueba.Text = "Usuario aprueba";
+            // 
+            // RrhhTxtUsuCre
+            // 
+            this.RrhhTxtUsuCre.Enabled = false;
+            this.RrhhTxtUsuCre.Location = new System.Drawing.Point(912, 160);
+            this.RrhhTxtUsuCre.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhTxtUsuCre.Name = "RrhhTxtUsuCre";
+            this.RrhhTxtUsuCre.Size = new System.Drawing.Size(142, 20);
+            this.RrhhTxtUsuCre.TabIndex = 44;
+            // 
+            // RrhhLblUsuCrea
+            // 
+            this.RrhhLblUsuCrea.AutoSize = true;
+            this.RrhhLblUsuCrea.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblUsuCrea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblUsuCrea.Location = new System.Drawing.Point(762, 160);
+            this.RrhhLblUsuCrea.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblUsuCrea.Name = "RrhhLblUsuCrea";
+            this.RrhhLblUsuCrea.Size = new System.Drawing.Size(87, 19);
+            this.RrhhLblUsuCrea.TabIndex = 43;
+            this.RrhhLblUsuCrea.Text = "Usuario crea";
+            // 
+            // RrhhTxtMontoLetras
+            // 
+            this.RrhhTxtMontoLetras.Enabled = false;
+            this.RrhhTxtMontoLetras.Location = new System.Drawing.Point(912, 104);
+            this.RrhhTxtMontoLetras.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhTxtMontoLetras.Multiline = true;
+            this.RrhhTxtMontoLetras.Name = "RrhhTxtMontoLetras";
+            this.RrhhTxtMontoLetras.Size = new System.Drawing.Size(144, 48);
+            this.RrhhTxtMontoLetras.TabIndex = 42;
+            // 
+            // RrhhLblMontoLetras
+            // 
+            this.RrhhLblMontoLetras.AutoSize = true;
+            this.RrhhLblMontoLetras.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblMontoLetras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblMontoLetras.Location = new System.Drawing.Point(762, 104);
+            this.RrhhLblMontoLetras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblMontoLetras.Name = "RrhhLblMontoLetras";
+            this.RrhhLblMontoLetras.Size = new System.Drawing.Size(111, 19);
+            this.RrhhLblMontoLetras.TabIndex = 41;
+            this.RrhhLblMontoLetras.Text = "Monto en Letras";
+            // 
+            // RrhhDtpFechaEmision
+            // 
+            this.RrhhDtpFechaEmision.CustomFormat = " dd/MM/yyyy";
+            this.RrhhDtpFechaEmision.Enabled = false;
+            this.RrhhDtpFechaEmision.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.RrhhDtpFechaEmision.Location = new System.Drawing.Point(912, 72);
+            this.RrhhDtpFechaEmision.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhDtpFechaEmision.Name = "RrhhDtpFechaEmision";
+            this.RrhhDtpFechaEmision.Size = new System.Drawing.Size(151, 20);
+            this.RrhhDtpFechaEmision.TabIndex = 40;
+            // 
+            // RrhhLblFechaEmision
+            // 
+            this.RrhhLblFechaEmision.AutoSize = true;
+            this.RrhhLblFechaEmision.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblFechaEmision.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblFechaEmision.Location = new System.Drawing.Point(760, 72);
+            this.RrhhLblFechaEmision.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblFechaEmision.Name = "RrhhLblFechaEmision";
+            this.RrhhLblFechaEmision.Size = new System.Drawing.Size(117, 19);
+            this.RrhhLblFechaEmision.TabIndex = 39;
+            this.RrhhLblFechaEmision.Text = "Fecha de emision";
+            // 
+            // RrhhTxtNoFiniquito
+            // 
+            this.RrhhTxtNoFiniquito.Enabled = false;
+            this.RrhhTxtNoFiniquito.Location = new System.Drawing.Point(912, 40);
+            this.RrhhTxtNoFiniquito.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhTxtNoFiniquito.Name = "RrhhTxtNoFiniquito";
+            this.RrhhTxtNoFiniquito.Size = new System.Drawing.Size(146, 20);
+            this.RrhhTxtNoFiniquito.TabIndex = 38;
+            // 
+            // RrhhLblNoFiniquito
+            // 
+            this.RrhhLblNoFiniquito.AutoSize = true;
+            this.RrhhLblNoFiniquito.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblNoFiniquito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblNoFiniquito.Location = new System.Drawing.Point(760, 40);
+            this.RrhhLblNoFiniquito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblNoFiniquito.Name = "RrhhLblNoFiniquito";
+            this.RrhhLblNoFiniquito.Size = new System.Drawing.Size(91, 19);
+            this.RrhhLblNoFiniquito.TabIndex = 37;
+            this.RrhhLblNoFiniquito.Text = "No. Finiquito";
+            // 
+            // RrhhTxtTotalNeto
+            // 
+            this.RrhhTxtTotalNeto.Enabled = false;
+            this.RrhhTxtTotalNeto.Location = new System.Drawing.Point(568, 216);
+            this.RrhhTxtTotalNeto.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhTxtTotalNeto.Name = "RrhhTxtTotalNeto";
+            this.RrhhTxtTotalNeto.Size = new System.Drawing.Size(144, 20);
+            this.RrhhTxtTotalNeto.TabIndex = 36;
+            // 
+            // RrhhLblTotalNeto
+            // 
+            this.RrhhLblTotalNeto.AutoSize = true;
+            this.RrhhLblTotalNeto.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblTotalNeto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblTotalNeto.Location = new System.Drawing.Point(418, 215);
+            this.RrhhLblTotalNeto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblTotalNeto.Name = "RrhhLblTotalNeto";
+            this.RrhhLblTotalNeto.Size = new System.Drawing.Size(75, 19);
+            this.RrhhLblTotalNeto.TabIndex = 35;
+            this.RrhhLblTotalNeto.Text = "Total Neto";
+            // 
+            // RrhhTxtTotalDeducciones
+            // 
+            this.RrhhTxtTotalDeducciones.Enabled = false;
+            this.RrhhTxtTotalDeducciones.Location = new System.Drawing.Point(568, 184);
+            this.RrhhTxtTotalDeducciones.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhTxtTotalDeducciones.Name = "RrhhTxtTotalDeducciones";
+            this.RrhhTxtTotalDeducciones.Size = new System.Drawing.Size(144, 20);
+            this.RrhhTxtTotalDeducciones.TabIndex = 34;
+            // 
+            // RrhhLblTotalDeducciones
+            // 
+            this.RrhhLblTotalDeducciones.AutoSize = true;
+            this.RrhhLblTotalDeducciones.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblTotalDeducciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblTotalDeducciones.Location = new System.Drawing.Point(418, 183);
+            this.RrhhLblTotalDeducciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblTotalDeducciones.Name = "RrhhLblTotalDeducciones";
+            this.RrhhLblTotalDeducciones.Size = new System.Drawing.Size(124, 19);
+            this.RrhhLblTotalDeducciones.TabIndex = 33;
+            this.RrhhLblTotalDeducciones.Text = "Total Deducciones";
+            // 
+            // RrhhTxtTotalPercepciones
+            // 
+            this.RrhhTxtTotalPercepciones.Enabled = false;
+            this.RrhhTxtTotalPercepciones.Location = new System.Drawing.Point(568, 152);
+            this.RrhhTxtTotalPercepciones.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhTxtTotalPercepciones.Name = "RrhhTxtTotalPercepciones";
+            this.RrhhTxtTotalPercepciones.Size = new System.Drawing.Size(144, 20);
+            this.RrhhTxtTotalPercepciones.TabIndex = 32;
+            // 
+            // RrhhLblTotalPercepciones
+            // 
+            this.RrhhLblTotalPercepciones.AutoSize = true;
+            this.RrhhLblTotalPercepciones.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblTotalPercepciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblTotalPercepciones.Location = new System.Drawing.Point(418, 151);
+            this.RrhhLblTotalPercepciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblTotalPercepciones.Name = "RrhhLblTotalPercepciones";
+            this.RrhhLblTotalPercepciones.Size = new System.Drawing.Size(126, 19);
+            this.RrhhLblTotalPercepciones.TabIndex = 31;
+            this.RrhhLblTotalPercepciones.Text = "Total Percepciones";
+            // 
+            // RrhhTxtSalarioPromedio
+            // 
+            this.RrhhTxtSalarioPromedio.Enabled = false;
+            this.RrhhTxtSalarioPromedio.Location = new System.Drawing.Point(574, 56);
+            this.RrhhTxtSalarioPromedio.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhTxtSalarioPromedio.Name = "RrhhTxtSalarioPromedio";
+            this.RrhhTxtSalarioPromedio.Size = new System.Drawing.Size(146, 20);
+            this.RrhhTxtSalarioPromedio.TabIndex = 30;
+            // 
+            // RrhhLblSalarioPromedio
+            // 
+            this.RrhhLblSalarioPromedio.AutoSize = true;
+            this.RrhhLblSalarioPromedio.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblSalarioPromedio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblSalarioPromedio.Location = new System.Drawing.Point(424, 56);
+            this.RrhhLblSalarioPromedio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblSalarioPromedio.Name = "RrhhLblSalarioPromedio";
+            this.RrhhLblSalarioPromedio.Size = new System.Drawing.Size(116, 19);
+            this.RrhhLblSalarioPromedio.TabIndex = 29;
+            this.RrhhLblSalarioPromedio.Text = "Salario Promedio";
+            // 
+            // RrhhTxtMotivoBaja
+            // 
+            this.RrhhTxtMotivoBaja.Enabled = false;
+            this.RrhhTxtMotivoBaja.Location = new System.Drawing.Point(162, 152);
+            this.RrhhTxtMotivoBaja.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhTxtMotivoBaja.Name = "RrhhTxtMotivoBaja";
+            this.RrhhTxtMotivoBaja.Size = new System.Drawing.Size(97, 20);
+            this.RrhhTxtMotivoBaja.TabIndex = 28;
+            // 
+            // RrhhLblMotivoBaja
+            // 
+            this.RrhhLblMotivoBaja.AutoSize = true;
+            this.RrhhLblMotivoBaja.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblMotivoBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblMotivoBaja.Location = new System.Drawing.Point(32, 152);
+            this.RrhhLblMotivoBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblMotivoBaja.Name = "RrhhLblMotivoBaja";
+            this.RrhhLblMotivoBaja.Size = new System.Drawing.Size(103, 19);
+            this.RrhhLblMotivoBaja.TabIndex = 27;
+            this.RrhhLblMotivoBaja.Text = "Motivo de baja";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(160, 120);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(241, 21);
+            this.comboBox1.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.label1.Location = new System.Drawing.Point(32, 120);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 19);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Baja de Empleado";
+            // 
+            // RrhhCboEmpresa
+            // 
+            this.RrhhCboEmpresa.FormattingEnabled = true;
+            this.RrhhCboEmpresa.Location = new System.Drawing.Point(160, 32);
+            this.RrhhCboEmpresa.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhCboEmpresa.Name = "RrhhCboEmpresa";
+            this.RrhhCboEmpresa.Size = new System.Drawing.Size(241, 21);
+            this.RrhhCboEmpresa.TabIndex = 24;
+            // 
+            // RrhhLblEmpresa
+            // 
+            this.RrhhLblEmpresa.AutoSize = true;
+            this.RrhhLblEmpresa.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblEmpresa.Location = new System.Drawing.Point(32, 32);
+            this.RrhhLblEmpresa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblEmpresa.Name = "RrhhLblEmpresa";
+            this.RrhhLblEmpresa.Size = new System.Drawing.Size(61, 19);
+            this.RrhhLblEmpresa.TabIndex = 23;
+            this.RrhhLblEmpresa.Text = "Empresa";
+            // 
+            // RrhhTxtIdLiquidacion
+            // 
+            this.RrhhTxtIdLiquidacion.Enabled = false;
+            this.RrhhTxtIdLiquidacion.Location = new System.Drawing.Point(158, 8);
+            this.RrhhTxtIdLiquidacion.Margin = new System.Windows.Forms.Padding(2);
+            this.RrhhTxtIdLiquidacion.Name = "RrhhTxtIdLiquidacion";
+            this.RrhhTxtIdLiquidacion.Size = new System.Drawing.Size(97, 20);
+            this.RrhhTxtIdLiquidacion.TabIndex = 22;
+            // 
+            // RrhhLblIdLiquidacion
+            // 
+            this.RrhhLblIdLiquidacion.AutoSize = true;
+            this.RrhhLblIdLiquidacion.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblIdLiquidacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblIdLiquidacion.Location = new System.Drawing.Point(32, 8);
+            this.RrhhLblIdLiquidacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblIdLiquidacion.Name = "RrhhLblIdLiquidacion";
+            this.RrhhLblIdLiquidacion.Size = new System.Drawing.Size(98, 19);
+            this.RrhhLblIdLiquidacion.TabIndex = 21;
+            this.RrhhLblIdLiquidacion.Text = "Id Liquidacion";
             // 
             // RrhhDtpFechaIngresoEmp
             // 
             this.RrhhDtpFechaIngresoEmp.CustomFormat = " dd/MM/yyyy";
             this.RrhhDtpFechaIngresoEmp.Enabled = false;
             this.RrhhDtpFechaIngresoEmp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.RrhhDtpFechaIngresoEmp.Location = new System.Drawing.Point(240, 104);
+            this.RrhhDtpFechaIngresoEmp.Location = new System.Drawing.Point(160, 184);
             this.RrhhDtpFechaIngresoEmp.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhDtpFechaIngresoEmp.Name = "RrhhDtpFechaIngresoEmp";
             this.RrhhDtpFechaIngresoEmp.Size = new System.Drawing.Size(151, 20);
@@ -352,7 +736,7 @@
             // RrhhCboEstadoLiqui
             // 
             this.RrhhCboEstadoLiqui.FormattingEnabled = true;
-            this.RrhhCboEstadoLiqui.Location = new System.Drawing.Point(570, 188);
+            this.RrhhCboEstadoLiqui.Location = new System.Drawing.Point(910, 8);
             this.RrhhCboEstadoLiqui.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhCboEstadoLiqui.Name = "RrhhCboEstadoLiqui";
             this.RrhhCboEstadoLiqui.Size = new System.Drawing.Size(103, 21);
@@ -361,28 +745,28 @@
             // RrhhTxtDiasLaborados
             // 
             this.RrhhTxtDiasLaborados.Enabled = false;
-            this.RrhhTxtDiasLaborados.Location = new System.Drawing.Point(570, 150);
+            this.RrhhTxtDiasLaborados.Location = new System.Drawing.Point(160, 248);
             this.RrhhTxtDiasLaborados.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhTxtDiasLaborados.Name = "RrhhTxtDiasLaborados";
-            this.RrhhTxtDiasLaborados.Size = new System.Drawing.Size(205, 20);
+            this.RrhhTxtDiasLaborados.Size = new System.Drawing.Size(96, 20);
             this.RrhhTxtDiasLaborados.TabIndex = 18;
             // 
             // RrhhTxtSalarioDia
             // 
             this.RrhhTxtSalarioDia.Enabled = false;
-            this.RrhhTxtSalarioDia.Location = new System.Drawing.Point(570, 105);
+            this.RrhhTxtSalarioDia.Location = new System.Drawing.Point(570, 121);
             this.RrhhTxtSalarioDia.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhTxtSalarioDia.Name = "RrhhTxtSalarioDia";
-            this.RrhhTxtSalarioDia.Size = new System.Drawing.Size(205, 20);
+            this.RrhhTxtSalarioDia.Size = new System.Drawing.Size(142, 20);
             this.RrhhTxtSalarioDia.TabIndex = 17;
             // 
             // RrhhTxtBaseIndenmizacion
             // 
             this.RrhhTxtBaseIndenmizacion.Enabled = false;
-            this.RrhhTxtBaseIndenmizacion.Location = new System.Drawing.Point(570, 65);
+            this.RrhhTxtBaseIndenmizacion.Location = new System.Drawing.Point(570, 88);
             this.RrhhTxtBaseIndenmizacion.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhTxtBaseIndenmizacion.Name = "RrhhTxtBaseIndenmizacion";
-            this.RrhhTxtBaseIndenmizacion.Size = new System.Drawing.Size(205, 20);
+            this.RrhhTxtBaseIndenmizacion.Size = new System.Drawing.Size(142, 20);
             this.RrhhTxtBaseIndenmizacion.TabIndex = 16;
             // 
             // RrhhTxtSalarioMensual
@@ -391,7 +775,7 @@
             this.RrhhTxtSalarioMensual.Location = new System.Drawing.Point(570, 26);
             this.RrhhTxtSalarioMensual.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhTxtSalarioMensual.Name = "RrhhTxtSalarioMensual";
-            this.RrhhTxtSalarioMensual.Size = new System.Drawing.Size(205, 20);
+            this.RrhhTxtSalarioMensual.Size = new System.Drawing.Size(142, 20);
             this.RrhhTxtSalarioMensual.TabIndex = 15;
             // 
             // RrhhLblEstadoLiquidacion
@@ -399,7 +783,7 @@
             this.RrhhLblEstadoLiquidacion.AutoSize = true;
             this.RrhhLblEstadoLiquidacion.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblEstadoLiquidacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblEstadoLiquidacion.Location = new System.Drawing.Point(420, 188);
+            this.RrhhLblEstadoLiquidacion.Location = new System.Drawing.Point(760, 8);
             this.RrhhLblEstadoLiquidacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblEstadoLiquidacion.Name = "RrhhLblEstadoLiquidacion";
             this.RrhhLblEstadoLiquidacion.Size = new System.Drawing.Size(127, 19);
@@ -411,7 +795,7 @@
             this.RrhhLblDiasLaborados.AutoSize = true;
             this.RrhhLblDiasLaborados.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblDiasLaborados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblDiasLaborados.Location = new System.Drawing.Point(420, 143);
+            this.RrhhLblDiasLaborados.Location = new System.Drawing.Point(32, 248);
             this.RrhhLblDiasLaborados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblDiasLaborados.Name = "RrhhLblDiasLaborados";
             this.RrhhLblDiasLaborados.Size = new System.Drawing.Size(101, 19);
@@ -423,7 +807,7 @@
             this.RrhhLblSalarioDia.AutoSize = true;
             this.RrhhLblSalarioDia.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblSalarioDia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblSalarioDia.Location = new System.Drawing.Point(420, 104);
+            this.RrhhLblSalarioDia.Location = new System.Drawing.Point(420, 120);
             this.RrhhLblSalarioDia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblSalarioDia.Name = "RrhhLblSalarioDia";
             this.RrhhLblSalarioDia.Size = new System.Drawing.Size(100, 19);
@@ -435,7 +819,7 @@
             this.RrhhLblBaseIndenmizacion.AutoSize = true;
             this.RrhhLblBaseIndenmizacion.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblBaseIndenmizacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblBaseIndenmizacion.Location = new System.Drawing.Point(420, 65);
+            this.RrhhLblBaseIndenmizacion.Location = new System.Drawing.Point(420, 88);
             this.RrhhLblBaseIndenmizacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblBaseIndenmizacion.Name = "RrhhLblBaseIndenmizacion";
             this.RrhhLblBaseIndenmizacion.Size = new System.Drawing.Size(133, 19);
@@ -458,7 +842,7 @@
             // 
             this.RrhhDtpFechaBajaEmpleado.CustomFormat = " dd/MM/yyyy";
             this.RrhhDtpFechaBajaEmpleado.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.RrhhDtpFechaBajaEmpleado.Location = new System.Drawing.Point(242, 169);
+            this.RrhhDtpFechaBajaEmpleado.Location = new System.Drawing.Point(160, 216);
             this.RrhhDtpFechaBajaEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhDtpFechaBajaEmpleado.Name = "RrhhDtpFechaBajaEmpleado";
             this.RrhhDtpFechaBajaEmpleado.Size = new System.Drawing.Size(151, 20);
@@ -467,7 +851,7 @@
             // RrhhTxtIdEmpleado
             // 
             this.RrhhTxtIdEmpleado.Enabled = false;
-            this.RrhhTxtIdEmpleado.Location = new System.Drawing.Point(156, 65);
+            this.RrhhTxtIdEmpleado.Location = new System.Drawing.Point(160, 89);
             this.RrhhTxtIdEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhTxtIdEmpleado.Name = "RrhhTxtIdEmpleado";
             this.RrhhTxtIdEmpleado.Size = new System.Drawing.Size(97, 20);
@@ -476,7 +860,7 @@
             // RrhhCboEmpleado
             // 
             this.RrhhCboEmpleado.FormattingEnabled = true;
-            this.RrhhCboEmpleado.Location = new System.Drawing.Point(156, 26);
+            this.RrhhCboEmpleado.Location = new System.Drawing.Point(160, 64);
             this.RrhhCboEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhCboEmpleado.Name = "RrhhCboEmpleado";
             this.RrhhCboEmpleado.Size = new System.Drawing.Size(241, 21);
@@ -487,31 +871,31 @@
             this.RrhhLblFechaBaja.AutoSize = true;
             this.RrhhLblFechaBaja.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblFechaBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblFechaBaja.Location = new System.Drawing.Point(32, 168);
+            this.RrhhLblFechaBaja.Location = new System.Drawing.Point(32, 216);
             this.RrhhLblFechaBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblFechaBaja.Name = "RrhhLblFechaBaja";
-            this.RrhhLblFechaBaja.Size = new System.Drawing.Size(168, 19);
+            this.RrhhLblFechaBaja.Size = new System.Drawing.Size(98, 19);
             this.RrhhLblFechaBaja.TabIndex = 3;
-            this.RrhhLblFechaBaja.Text = "Fecha de baja liquidacion";
+            this.RrhhLblFechaBaja.Text = "Fecha de baja ";
             // 
             // RrhhLblFechaIngreso
             // 
             this.RrhhLblFechaIngreso.AutoSize = true;
             this.RrhhLblFechaIngreso.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblFechaIngreso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblFechaIngreso.Location = new System.Drawing.Point(30, 104);
+            this.RrhhLblFechaIngreso.Location = new System.Drawing.Point(32, 184);
             this.RrhhLblFechaIngreso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblFechaIngreso.Name = "RrhhLblFechaIngreso";
-            this.RrhhLblFechaIngreso.Size = new System.Drawing.Size(188, 19);
+            this.RrhhLblFechaIngreso.Size = new System.Drawing.Size(114, 19);
             this.RrhhLblFechaIngreso.TabIndex = 2;
-            this.RrhhLblFechaIngreso.Text = "Fecha de ingreso liquidacion";
+            this.RrhhLblFechaIngreso.Text = "Fecha de ingreso";
             // 
             // RrhhLblIdEmpleado
             // 
             this.RrhhLblIdEmpleado.AutoSize = true;
             this.RrhhLblIdEmpleado.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblIdEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblIdEmpleado.Location = new System.Drawing.Point(30, 65);
+            this.RrhhLblIdEmpleado.Location = new System.Drawing.Point(30, 89);
             this.RrhhLblIdEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblIdEmpleado.Name = "RrhhLblIdEmpleado";
             this.RrhhLblIdEmpleado.Size = new System.Drawing.Size(86, 19);
@@ -523,7 +907,7 @@
             this.RrhhLblEmpleadoLiqui.AutoSize = true;
             this.RrhhLblEmpleadoLiqui.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblEmpleadoLiqui.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblEmpleadoLiqui.Location = new System.Drawing.Point(30, 26);
+            this.RrhhLblEmpleadoLiqui.Location = new System.Drawing.Point(30, 64);
             this.RrhhLblEmpleadoLiqui.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblEmpleadoLiqui.Name = "RrhhLblEmpleadoLiqui";
             this.RrhhLblEmpleadoLiqui.Size = new System.Drawing.Size(70, 19);
@@ -689,6 +1073,19 @@
             this.RrhhiBtnGuardarLiqui.TabIndex = 0;
             this.RrhhiBtnGuardarLiqui.UseVisualStyleBackColor = true;
             // 
+            // RrhhLblAnuncio
+            // 
+            this.RrhhLblAnuncio.AutoSize = true;
+            this.RrhhLblAnuncio.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.RrhhLblAnuncio.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblAnuncio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblAnuncio.Location = new System.Drawing.Point(800, 488);
+            this.RrhhLblAnuncio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RrhhLblAnuncio.Name = "RrhhLblAnuncio";
+            this.RrhhLblAnuncio.Size = new System.Drawing.Size(327, 22);
+            this.RrhhLblAnuncio.TabIndex = 24;
+            this.RrhhLblAnuncio.Text = "Este panel se eliminara en el 100%";
+            // 
             // FrmLiquidacionEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -764,16 +1161,47 @@
         private System.Windows.Forms.PictureBox RrhhPbLiquidacion;
         private System.Windows.Forms.PictureBox RrhhPbDonButti;
         private System.Windows.Forms.DateTimePicker RrhhDtpFechaIngresoEmp;
+        private System.Windows.Forms.ComboBox RrhhCboEmpresa;
+        private System.Windows.Forms.Label RrhhLblEmpresa;
+        private System.Windows.Forms.TextBox RrhhTxtIdLiquidacion;
+        private System.Windows.Forms.Label RrhhLblIdLiquidacion;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox RrhhTxtSalarioPromedio;
+        private System.Windows.Forms.Label RrhhLblSalarioPromedio;
+        private System.Windows.Forms.TextBox RrhhTxtMotivoBaja;
+        private System.Windows.Forms.Label RrhhLblMotivoBaja;
+        private System.Windows.Forms.TextBox RrhhTxtTotalDeducciones;
+        private System.Windows.Forms.Label RrhhLblTotalDeducciones;
+        private System.Windows.Forms.TextBox RrhhTxtTotalPercepciones;
+        private System.Windows.Forms.Label RrhhLblTotalPercepciones;
+        private System.Windows.Forms.TextBox RrhhTxtTotalNeto;
+        private System.Windows.Forms.Label RrhhLblTotalNeto;
+        private System.Windows.Forms.TextBox RrhhTxtUsuAprueba;
+        private System.Windows.Forms.Label RrhhLblUsuAprueba;
+        private System.Windows.Forms.TextBox RrhhTxtUsuCre;
+        private System.Windows.Forms.Label RrhhLblUsuCrea;
+        private System.Windows.Forms.TextBox RrhhTxtMontoLetras;
+        private System.Windows.Forms.Label RrhhLblMontoLetras;
+        private System.Windows.Forms.DateTimePicker RrhhDtpFechaEmision;
+        private System.Windows.Forms.Label RrhhLblFechaEmision;
+        private System.Windows.Forms.TextBox RrhhTxtNoFiniquito;
+        private System.Windows.Forms.Label RrhhLblNoFiniquito;
+        private System.Windows.Forms.CheckBox RrhhCbEstado;
+        private System.Windows.Forms.Label RrhhLblEstado;
+        private System.Windows.Forms.DateTimePicker RrhhDtpFechaAprobacion;
+        private System.Windows.Forms.Label RrhhLblFechaAprueba;
+        private System.Windows.Forms.Panel RrhhPnlContenedorCatalogos;
+        private System.Windows.Forms.Label RrhhLblCatalogo;
+        private System.Windows.Forms.Panel RrhhPnlBajEmpleado;
+        private System.Windows.Forms.Button RrhhBtnCatalogoBajaEmpleado;
+        private System.Windows.Forms.Label RrhhLblCatalogoBajaEmpleado;
         private System.Windows.Forms.Panel RrhhPnlParametroLey;
         private System.Windows.Forms.Button RrhhBtnCatalogoParametroLey;
         private System.Windows.Forms.Label RrhhLblCatalogoParametroLey;
         private System.Windows.Forms.Panel RrhhPnlMotivoBaja;
         private System.Windows.Forms.Button RrhhBtnCatalogoMotivoBaja;
         private System.Windows.Forms.Label RrhhLblCatalogoMotivoBaja;
-        private System.Windows.Forms.Panel RrhhPnlBajEmpleado;
-        private System.Windows.Forms.Button RrhhBtnCatalogoBajaEmpleado;
-        private System.Windows.Forms.Label RrhhLblCatalogoBajaEmpleado;
-        private System.Windows.Forms.Panel RrhhPnlContenedorCatalogos;
-        private System.Windows.Forms.Label RrhhLblCatalogo;
+        private System.Windows.Forms.Label RrhhLblAnuncio;
     }
 }

@@ -298,7 +298,7 @@
             this.RrhhDgvBajaEmp.Name = "RrhhDgvBajaEmp";
             this.RrhhDgvBajaEmp.Size = new System.Drawing.Size(832, 152);
             this.RrhhDgvBajaEmp.TabIndex = 23;
-            this.RrhhDgvBajaEmp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RrhhDgvBajaEmp_CellContentClick);
+            this.RrhhDgvBajaEmp.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RrhhDgvBajaEmp_RowHeaderMouseClick);
             // 
             // RrhhPnlTiulo
             // 
@@ -353,7 +353,7 @@
             // 
             this.RrhhBtnAyudaBajaEmp.BackgroundImage = global::CapaVista_Liquidacion_Rrhh.Properties.Resources.btn_ayuda;
             this.RrhhBtnAyudaBajaEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhBtnAyudaBajaEmp.Location = new System.Drawing.Point(856, 120);
+            this.RrhhBtnAyudaBajaEmp.Location = new System.Drawing.Point(936, 216);
             this.RrhhBtnAyudaBajaEmp.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhBtnAyudaBajaEmp.Name = "RrhhBtnAyudaBajaEmp";
             this.RrhhBtnAyudaBajaEmp.Size = new System.Drawing.Size(70, 70);
