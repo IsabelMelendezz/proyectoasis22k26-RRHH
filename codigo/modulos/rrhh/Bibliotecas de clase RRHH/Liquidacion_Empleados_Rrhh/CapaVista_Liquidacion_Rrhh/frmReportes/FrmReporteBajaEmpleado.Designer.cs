@@ -48,7 +48,7 @@
             this.Controls.Add(this.RrhhRdvBajaEmpleado);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReporteBajaEmpleado";
-            this.Text = "FrmReporteBajaEmpleado";
+            this.Text = "9705–FrmReporteBajaEmpleado";
             this.Load += new System.EventHandler(this.FrmReporteBajaEmpleado_Load);
             this.ResumeLayout(false);
 
