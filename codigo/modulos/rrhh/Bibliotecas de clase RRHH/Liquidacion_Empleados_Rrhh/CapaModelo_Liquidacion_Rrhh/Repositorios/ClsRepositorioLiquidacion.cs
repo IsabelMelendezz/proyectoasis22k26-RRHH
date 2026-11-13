@@ -16,7 +16,23 @@ namespace CapaModelo_Liquidacion_Rrhh.Repositorios
 
         public ClsRepositorioLiquidacion()
         {
-            _SelectAll = "SELECT idLiquidacion, idEmpresa, idEmpleado, idBajaEmpleado, fechaIngresoLiquidacion, fechaBajaLiquidacion, diasLaboradosLiquidacion, salarioMensualLiquidacion, salarioPromedioLiquidacion, baseIndemnizacionLiquidacion, salarioDiaLiquidacion, totalPercepcionLiquidacion, totalDeduccionLiquidacion, totalNetoLiquidacion, parametrosUsadosLiquidacion, numeroFiniquitoLiquidacion, montoLetrasFiniquitoLiquidacion, estadoLiquidacion, idUsuarioCrea, idUsuarioAprueba FROM tblLiquidacion";
+            _SelectAll = @"SELECT l.idLiquidacion, l.idEmpresa, l.idEmpleado, l.idBajaEmpleado,
+                                  l.fechaIngresoLiquidacion, l.fechaBajaLiquidacion,
+                                  l.diasLaboradosLiquidacion, l.salarioMensualLiquidacion,
+                                  l.salarioPromedioLiquidacion, l.baseIndemnizacionLiquidacion,
+                                  l.salarioDiaLiquidacion, l.totalPercepcionLiquidacion,
+                                  l.totalDeduccionLiquidacion, l.totalNetoLiquidacion,
+                                  l.parametrosUsadosLiquidacion, l.numeroFiniquitoLiquidacion,
+                                  l.montoLetrasFiniquitoLiquidacion, l.estadoLiquidacion,
+                                  l.idUsuarioCrea, l.idUsuarioAprueba,
+                                  em.razonSocialEmpresa AS NombreEmpresa,
+                                  CONCAT(e.nombresEmpleado, ' ', e.apellidosEmpleado) AS NombreEmpleado,
+                                  m.nombreMotivoBaja AS NombreMotivoBaja
+                           FROM tblLiquidacion l
+                           INNER JOIN tblempresa em ON em.idEmpresa = l.idEmpresa
+                           INNER JOIN tblempleado e ON e.idEmpleado = l.idEmpleado
+                           INNER JOIN tblbajaempleado b ON b.idBajaEmpleado = l.idBajaEmpleado
+                           INNER JOIN tblmotivobaja m ON m.idMotivoBaja = b.idMotivoBaja";
 
             _Insert = "INSERT INTO tblLiquidacion (idEmpresa, idEmpleado, idBajaEmpleado, fechaIngresoLiquidacion, fechaBajaLiquidacion, diasLaboradosLiquidacion, salarioMensualLiquidacion, salarioPromedioLiquidacion, baseIndemnizacionLiquidacion, salarioDiaLiquidacion, totalPercepcionLiquidacion, totalDeduccionLiquidacion, totalNetoLiquidacion, parametrosUsadosLiquidacion, numeroFiniquitoLiquidacion, montoLetrasFiniquitoLiquidacion, estadoLiquidacion, idUsuarioCrea, idUsuarioAprueba) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
@@ -158,7 +174,10 @@ namespace CapaModelo_Liquidacion_Rrhh.Repositorios
                     MontoLetrasFiniquitoLiquidacion = Fila[16].ToString(),
                     EstadoLiquidacion = Fila[17].ToString(),
                     IdUsuarioCrea = Convert.ToInt32(Fila[18]),
-                    IdUsuarioAprueba = Convert.ToInt32(Fila[19])
+                    IdUsuarioAprueba = Convert.ToInt32(Fila[19]),
+                    NombreEmpresa = Fila["NombreEmpresa"].ToString(),
+                    NombreEmpleado = Fila["NombreEmpleado"].ToString(),
+                    NombreMotivoBaja = Fila["NombreMotivoBaja"].ToString()
                 });
             }
             return Lista;

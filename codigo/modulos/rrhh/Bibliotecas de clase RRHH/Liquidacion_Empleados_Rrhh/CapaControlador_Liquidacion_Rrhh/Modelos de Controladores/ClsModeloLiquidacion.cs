@@ -38,6 +38,9 @@ namespace CapaControlador_Liquidacion_Rrhh
 
         // Extra para vistas (opcional, según joins de tu DB)
         private string _NombresEmpleado;
+        private string _NombreEmpresa;
+        private string _NombreEmpleado;
+        private string _NombreMotivoBaja;
 
         private ClsRepositorioLiquidacion _RepositorioLiquidacion;
         private List<ClsModeloLiquidacion> _ListaLiquidacion;
@@ -85,6 +88,9 @@ namespace CapaControlador_Liquidacion_Rrhh
         public int IdUsuarioAprueba { get => _IdUsuarioAprueba; set => _IdUsuarioAprueba = value; }
 
         public string NombresEmpleado { get => _NombresEmpleado; set => _NombresEmpleado = value; }
+        public string NombreEmpresa { get => _NombreEmpresa; set => _NombreEmpresa = value; }
+        public string NombreEmpleado { get => _NombreEmpleado; set => _NombreEmpleado = value; }
+        public string NombreMotivoBaja { get => _NombreMotivoBaja; set => _NombreMotivoBaja = value; }
         public List<ClsModeloDetalleLiquidacion> DetallesLiquidacion
         {
             get => _DetallesLiquidacion;
@@ -193,7 +199,10 @@ namespace CapaControlador_Liquidacion_Rrhh
                     _MontoLetrasFiniquitoLiquidacion = Item.MontoLetrasFiniquitoLiquidacion,
                     _EstadoLiquidacion = Item.EstadoLiquidacion,
                     _IdUsuarioCrea = Item.IdUsuarioCrea,
-                    _IdUsuarioAprueba = Item.IdUsuarioAprueba
+                    _IdUsuarioAprueba = Item.IdUsuarioAprueba,
+                    _NombreEmpresa = Item.NombreEmpresa,
+                    _NombreEmpleado = Item.NombreEmpleado,
+                    _NombreMotivoBaja = Item.NombreMotivoBaja
                 });
             }
 
