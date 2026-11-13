@@ -177,8 +177,8 @@ namespace CapaVista_Liquidacion_Rrhh.Formularios
 
         private void RrhhBtnImprimirLiqui_Click(object sender, EventArgs e)
         {
-            //FrmReporteLiquidacion ReporteLiquidacion = new FrmReporteLiquidacion();
-            //ReporteLiquidacion.ShowDialog();
+            FrmReporteLiquidacionEmpleado ReporteLiquidacion = new FrmReporteLiquidacionEmpleado();
+            ReporteLiquidacion.ShowDialog();
         }
 
       
@@ -441,9 +441,12 @@ private void RrhhBtnCatalogoMotivoBaja_Click(object sender, EventArgs e)
 
             // Se configuran las 19 columnas correspondientes
             RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colIdLiquidacion", DataPropertyName = "IdLiquidacion", HeaderText = "ID Liq", Width = 50 });
-            RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colIdEmpresa", DataPropertyName = "IdEmpresa", HeaderText = "ID Emp", Width = 50 });
-            RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colIdEmpleado", DataPropertyName = "IdEmpleado", HeaderText = "ID Empleado", Width = 60 });
-            RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colIdBajaEmpleado", DataPropertyName = "IdBajaEmpleado", HeaderText = "ID Baja", Width = 50 });
+            RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colIdEmpresa", DataPropertyName = "IdEmpresa", HeaderText = "ID Emp", Width = 50, Visible = false });
+            RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colNombreEmpresa", DataPropertyName = "NombreEmpresa", HeaderText = "Empresa", Width = 140 });
+            RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colIdEmpleado", DataPropertyName = "IdEmpleado", HeaderText = "ID Empleado", Width = 60, Visible = false });
+            RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colNombreEmpleado", DataPropertyName = "NombreEmpleado", HeaderText = "Empleado", Width = 140 });
+            RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colIdBajaEmpleado", DataPropertyName = "IdBajaEmpleado", HeaderText = "ID Baja", Width = 50, Visible = false });
+            RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colNombreMotivoBaja", DataPropertyName = "NombreMotivoBaja", HeaderText = "Motivo Baja", Width = 110 });
             RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colFechaIngreso", DataPropertyName = "FechaIngresoLiquidacion", HeaderText = "Ingreso", Width = 80, DefaultCellStyle = new DataGridViewCellStyle { Format = "dd/MM/yyyy" } });
             RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colFechaBaja", DataPropertyName = "FechaBajaLiquidacion", HeaderText = "Baja", Width = 80, DefaultCellStyle = new DataGridViewCellStyle { Format = "dd/MM/yyyy" } });
             RrhhDgvLiquidaciones.Columns.Add(new DataGridViewTextBoxColumn { Name = "colDiasLaborados", DataPropertyName = "DiasLaboradosLiquidacion", HeaderText = "Días Lab", Width = 70 });
@@ -717,7 +720,7 @@ private void RrhhBtnCatalogoMotivoBaja_Click(object sender, EventArgs e)
                 FlatStyle = FlatStyle.Flat,
                 SortMode = DataGridViewColumnSortMode.NotSortable
             };
-            columnaTipo.Items.Add("Percepción");
+            columnaTipo.Items.AddRange("Percepción", "Deducción");
             RrhhDtvConceptos.Columns.Add(columnaTipo);
 
             RrhhDtvConceptos.DefaultValuesNeeded +=
@@ -877,7 +880,13 @@ private void RrhhBtnCatalogoMotivoBaja_Click(object sender, EventArgs e)
                         fila.Cells["colMontoConcepto"].Value, out decimal monto))
                     continue;
 
-                percepcionesAdicionales += monto;
+                string tipoConcepto = Convert.ToString(
+                    fila.Cells["colTipoConcepto"].Value)?.Trim();
+                if (string.Equals(tipoConcepto, "Deducción",
+                    StringComparison.OrdinalIgnoreCase))
+                    deduccionesAdicionales += monto;
+                else
+                    percepcionesAdicionales += monto;
             }
 
             decimal totalPercepciones = _TotalPercepcionBase + percepcionesAdicionales;
@@ -995,22 +1004,13 @@ private void RrhhBtnCatalogoMotivoBaja_Click(object sender, EventArgs e)
                     continue;
                 }
 
-                DataRow percepcion = RrhhMetBuscarPercepcion(descripcion);
-                if (percepcion == null)
-                    percepcion = RrhhMetBuscarPercepcion("OTROS");
-
-                if (percepcion == null)
-                {
-                    if (validar)
-                        error = "No existe una percepción activa llamada OTROS. " +
-                                "Regístrela en tblpercepciondeduccion antes de guardar.";
-                    continue;
-                }
-
-                int idPercepcion = Convert.ToInt32(
-                    percepcion["idPercepcionDeduccion"]);
-                string nombre = Convert.ToString(
-                    percepcion["nombrePercepcionDeduccion"]);
+                bool esDeduccion = string.Equals(
+                    Convert.ToString(fila.Cells["colTipoConcepto"].Value)?.Trim(),
+                    "Deducción", StringComparison.OrdinalIgnoreCase);
+                int idPercepcion = esDeduccion ? 16 : 15;
+                string nombre = string.IsNullOrWhiteSpace(descripcion)
+                    ? (esDeduccion ? "OtrosDeduccion" : "OtrosPercepcion")
+                    : descripcion;
 
                 if (agrupados.TryGetValue(idPercepcion,
                     out ClsModeloDetalleLiquidacion existente))
@@ -1019,18 +1019,10 @@ private void RrhhBtnCatalogoMotivoBaja_Click(object sender, EventArgs e)
                     continue;
                 }
 
-                _DetallesOriginales.TryGetValue(idPercepcion,
-                    out ClsModeloDetalleLiquidacion original);
                 agrupados[idPercepcion] = new ClsModeloDetalleLiquidacion
                 {
-                    IdDetalleLiquidacion = original?.IdDetalleLiquidacion ?? 0,
-                    IdLiquidacion = original?.IdLiquidacion ?? 0,
                     IdPercepcionDeduccion = idPercepcion,
                     NombrePercepcionDeduccion = nombre,
-                    DiasDetalleLiquidacion =
-                        original?.DiasDetalleLiquidacion ?? 0m,
-                    BaseDetalleLiquidacion =
-                        original?.BaseDetalleLiquidacion ?? 0m,
                     MontoDetalleLiquidacion = monto
                 };
             }
@@ -1119,5 +1111,26 @@ private void RrhhBtnCatalogoMotivoBaja_Click(object sender, EventArgs e)
                 ? _Liquidacion.IdUsuarioCrea
                 : Convert.ToInt32(RrhhTxtUsuAprueba.Text);
         }
+
+        private void RrhhBtnAyudaLiqui_Click(object sender, EventArgs e)
+        {
+            RrhhMetAbrirAyuda(this, "LiquidacionEmpleado__RecursosHumanos.html");
+        }
+        internal static void RrhhMetAbrirAyuda(Control Ventana, string Pagina)
+        {
+            const string Ayuda = @"ayuda\modulos\rrhh\RrhhAyudas\RecursosHumanosAyudas.chm";
+            for (var Carpeta = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory); Carpeta != null; Carpeta = Carpeta.Parent)
+            {
+                string Ruta = Path.Combine(Carpeta.FullName, Ayuda);
+                if (File.Exists(Ruta))
+                {
+                    Help.ShowHelp(Ventana, Ruta, Pagina);
+                    return;
+                }
+            }
+            MessageBox.Show("No se encontró el archivo de ayuda de RRHH.", "Ayuda",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
     }
