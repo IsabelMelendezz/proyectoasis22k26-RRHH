@@ -49,7 +49,7 @@
             this.Controls.Add(this.RrhhRdvParametroLey);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReporteParametroLey";
-            this.Text = "FrmReporteParametroLey";
+            this.Text = "9707– FrmReporteParametroLey";
             this.ResumeLayout(false);
 
         }
