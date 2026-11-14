@@ -17,7 +17,6 @@ using System.Threading.Tasks;
  * utilizados en la vista del formulario
  * ===================================================================
 */
-
 namespace CapaModelo_Seguridad.Entidades
 {
     public class ClsEmpleado
@@ -28,7 +27,9 @@ namespace CapaModelo_Seguridad.Entidades
         public string NitEmpleado { get; set; }
         public string NombresEmpleado { get; set; }
         public string ApellidosEmpleado { get; set; }
-        public string PuestoEmpleado { get; set; }
+        public int IdDepartamento { get; set; }
+        public int IdJornada { get; set; }
+        public decimal SalarioEmpleado { get; set; }
         public string GeneroEmpleado { get; set; }
         public DateTime FechaNacimientoEmpleado { get; set; }
         public DateTime FechaContratacionEmpleado { get; set; }
