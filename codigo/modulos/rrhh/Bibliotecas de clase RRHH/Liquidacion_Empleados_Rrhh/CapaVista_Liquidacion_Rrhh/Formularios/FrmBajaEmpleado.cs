@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -125,6 +126,19 @@ namespace CapaVista_Liquidacion_Rrhh.Formularios
             RrhhDgvBajaEmp.AutoGenerateColumns = false;
             RrhhDgvBajaEmp.Columns.Clear();
 
+            // Bloquear edición en todo el DataGridView (Solo lectura)
+            RrhhDgvBajaEmp.ReadOnly = true;
+            RrhhDgvBajaEmp.AllowUserToAddRows = false; // Quita la fila vacía extra del final que suele dar errores de DBNull
+
+            // NUEVA COLUMNA AGREGADA PARA EVITAR EL ERROR (Llave Primaria)
+            RrhhDgvBajaEmp.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colIdBajaEmpleado",
+                DataPropertyName = "IdBajaEmpleado",
+                HeaderText = "ID",
+             
+            });
+
             RrhhDgvBajaEmp.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "colIdEmpleado",
@@ -132,6 +146,7 @@ namespace CapaVista_Liquidacion_Rrhh.Formularios
                 HeaderText = "ID EMP",
                 Width = 50
             });
+
             RrhhDgvBajaEmp.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "colIdMotivoBaja",
@@ -139,6 +154,7 @@ namespace CapaVista_Liquidacion_Rrhh.Formularios
                 HeaderText = "ID MBaja",
                 Width = 90
             });
+
             RrhhDgvBajaEmp.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "colFechaBajaEmpleado",
@@ -147,31 +163,32 @@ namespace CapaVista_Liquidacion_Rrhh.Formularios
                 Width = 160,
                 DefaultCellStyle = new DataGridViewCellStyle { Format = "dd/MM/yyyy HH:mm" }
             });
+
             RrhhDgvBajaEmp.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "colObservacionBajaEmpleado",
                 DataPropertyName = "ObservacionBajaEmpleado",
                 HeaderText = "Observaciones",
                 Width = 150,
-                
             });
+
             RrhhDgvBajaEmp.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "colIdUsuarioRegistra",
                 DataPropertyName = "IdUsuarioRegistra",
                 HeaderText = "ID_Usu_Regristra",
                 Width = 150,
-             
             });
+
             RrhhDgvBajaEmp.Columns.Add(new DataGridViewCheckBoxColumn
             {
                 Name = "colIsActive",
                 DataPropertyName = "IsActive",
                 HeaderText = "Estado",
-                Width = 60
+                Width = 60,
+                ReadOnly = true 
             });
         }
-
         private void RrhhdMetListarBajaEmp()
         {
             try
@@ -356,22 +373,76 @@ namespace CapaVista_Liquidacion_Rrhh.Formularios
             }
         }
 
-        private void RrhhDgvBajaEmp_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Verifica que se haya hecho clic sobre una fila válida (no en los encabezados)
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow fila = RrhhDgvBajaEmp.Rows[e.RowIndex];
-
-                // Obtiene el valor de la celda de la llave primaria (ajusta el nombre de la columna si varía)
-                RrhhTxtIdBajaEmpleado.Text = fila.Cells["IdBajaEmpleado"].Value?.ToString();
-            }
-        }
+        
 
         private void RrhhBtnImprimirBajaEmp_Click(object sender, EventArgs e)
         {
             FrmReporteBajaEmpleado ReporteBajaEmpleado = new FrmReporteBajaEmpleado();
             ReporteBajaEmpleado.ShowDialog();
+        }
+
+       
+
+        private void RrhhDgvBajaEmp_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow fila = RrhhDgvBajaEmp.Rows[e.RowIndex];
+            if (fila.IsNewRow) return;
+
+            try
+            {
+                RrhhTxtIdBajaEmpleado.Text = fila.Cells["colIdBajaEmpleado"].Value?.ToString();
+                RrhhTxtIdEmpleado.Text = fila.Cells["colIdEmpleado"].Value?.ToString();
+                RrhhTxtIdMotivoBaja.Text = fila.Cells["colIdMotivoBaja"].Value?.ToString();
+                RrhhTxtIdUsuRegistra.Text = fila.Cells["colIdUsuarioRegistra"].Value?.ToString();
+                RrhhTxtObservacionesBaja.Text = fila.Cells["colObservacionBajaEmpleado"].Value?.ToString();
+
+                // SINCRONIZAR LOS COMBOBOXES (Esto carga los nombres)
+              
+                if (int.TryParse(RrhhTxtIdEmpleado.Text, out int idEmp))
+                {
+                    RrhhCboEmpleado.SelectedValue = idEmp;
+                }
+
+                if (int.TryParse(RrhhTxtIdMotivoBaja.Text, out int idMotivo))
+                {
+                    RrhhCboMotivoBaja.SelectedValue = idMotivo;
+                }
+
+              
+                if (DateTime.TryParse(fila.Cells["colFechaBajaEmpleado"].Value?.ToString(), out DateTime fecha))
+                {
+                    RrhhDtpFechaBajaEmpleado.Value = fecha;
+                }
+
+               
+                RrhhChkEstadoBajaEmp.Checked = Convert.ToBoolean(fila.Cells["colIsActive"].Value ?? false);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void RrhhBtnAyudaBajaEmp_Click(object sender, EventArgs e)
+        {
+            RrhhMetAbrirAyuda(this, "BajaEmpleado__RecursosHumanos.html");
+        }
+        internal static void RrhhMetAbrirAyuda(Control Ventana, string Pagina)
+        {
+            const string Ayuda = @"ayuda\modulos\rrhh\RrhhAyudas\RecursosHumanosAyudas.chm";
+            for (var Carpeta = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory); Carpeta != null; Carpeta = Carpeta.Parent)
+            {
+                string Ruta = Path.Combine(Carpeta.FullName, Ayuda);
+                if (File.Exists(Ruta))
+                {
+                    Help.ShowHelp(Ventana, Ruta, Pagina);
+                    return;
+                }
+            }
+            MessageBox.Show("No se encontró el archivo de ayuda de RRHH.", "Ayuda",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 

@@ -298,7 +298,7 @@
             this.RrhhDgvBajaEmp.Name = "RrhhDgvBajaEmp";
             this.RrhhDgvBajaEmp.Size = new System.Drawing.Size(832, 152);
             this.RrhhDgvBajaEmp.TabIndex = 23;
-            this.RrhhDgvBajaEmp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RrhhDgvBajaEmp_CellContentClick);
+            this.RrhhDgvBajaEmp.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RrhhDgvBajaEmp_RowHeaderMouseClick);
             // 
             // RrhhPnlTiulo
             // 
@@ -359,6 +359,7 @@
             this.RrhhBtnAyudaBajaEmp.Size = new System.Drawing.Size(70, 70);
             this.RrhhBtnAyudaBajaEmp.TabIndex = 20;
             this.RrhhBtnAyudaBajaEmp.UseVisualStyleBackColor = true;
+            this.RrhhBtnAyudaBajaEmp.Click += new System.EventHandler(this.RrhhBtnAyudaBajaEmp_Click);
             // 
             // RrhhBtnFinBajaEmp
             // 

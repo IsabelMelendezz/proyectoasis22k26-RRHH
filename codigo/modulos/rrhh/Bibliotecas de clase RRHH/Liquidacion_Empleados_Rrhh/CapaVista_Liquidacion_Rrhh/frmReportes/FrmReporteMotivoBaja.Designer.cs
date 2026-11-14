@@ -51,7 +51,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmReporteMotivoBaja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "9702 – ReporteMotivoBaja";
+            this.Text = "9706 – ReporteMotivoBaja";
             this.Load += new System.EventHandler(this.FrmReporteMotivoBaja_Load);
             this.ResumeLayout(false);
 

@@ -76,6 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modelos de Controladores\ClsModeloBajaEmpleado.cs" />
+    <Compile Include="Modelos de Controladores\ClsModeloDetalleLiquidacion.cs" />
+    <Compile Include="Modelos de Controladores\ClsModeloLiquidacion.cs" />
     <Compile Include="Modelos de Controladores\ClsModeloMotivoBaja.cs" />
     <Compile Include="Modelos de Controladores\ClsModeloParametroLey.cs" />
     <Compile Include="Objetos de valor liquidacion\ClsEstadoEntidad.cs" />
