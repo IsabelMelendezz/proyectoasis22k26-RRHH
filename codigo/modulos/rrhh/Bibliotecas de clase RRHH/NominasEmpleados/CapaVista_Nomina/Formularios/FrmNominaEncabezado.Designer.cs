@@ -166,9 +166,9 @@
             this.RrhhLblPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
             this.RrhhLblPuesto.Location = new System.Drawing.Point(18, 138);
             this.RrhhLblPuesto.Name = "RrhhLblPuesto";
-            this.RrhhLblPuesto.Size = new System.Drawing.Size(62, 19);
+            this.RrhhLblPuesto.Size = new System.Drawing.Size(115, 19);
             this.RrhhLblPuesto.TabIndex = 5;
-            this.RrhhLblPuesto.Text = "Puesto:";
+            this.RrhhLblPuesto.Text = "Departamento:";
             // 
             // RrhhTxtDepartamento
             // 
