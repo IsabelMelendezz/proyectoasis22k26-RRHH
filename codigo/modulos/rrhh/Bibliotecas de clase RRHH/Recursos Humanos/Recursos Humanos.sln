@@ -4,8 +4,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.14.37516.0 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaVista_Rrhh", "CapaVista_Rrhh\CapaVista_Rrhh.csproj", "{334872A7-435C-4321-8846-EF652F433CA7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D42D0615-8098-45A0-A9E4-7615174EEDA3} = {D42D0615-8098-45A0-A9E4-7615174EEDA3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaControlador_Rrhh", "CapaControlador_Rrhh\CapaControlador_Rrhh.csproj", "{D42D0615-8098-45A0-A9E4-7615174EEDA3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A090A618-B7C1-4E30-B6F5-A73482B8B52F} = {A090A618-B7C1-4E30-B6F5-A73482B8B52F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaModelo_Rrhh", "CapaModelo_Rrhh\CapaModelo_Rrhh.csproj", "{A090A618-B7C1-4E30-B6F5-A73482B8B52F}"
 EndProject

@@ -3,16 +3,17 @@ Compatibility=1.1 or later
 Compiled file=RecursosHumanosAyudas.chm
 Contents file=RecursosHumanosAyudas.hhc
 Default Window=RecursosHumanosAyudas
-Default topic=Asistencia__RecursosHumanos.html
+Default topic=MenuPrincipal__RecursosHumanos.html
 Display compile progress=No
 Full-text search=Yes
 Language=0x100a Español (Guatemala)
 Title=Ayudas - Recursos Humanos
 
 [WINDOWS]
-RecursosHumanosAyudas="Ayudas del módulo de Recursos Humanos","RecursosHumanosAyudas.hhc",,"Asistencia__RecursosHumanos.html","Asistencia__RecursosHumanos.html",,,,,0x23520,,0x3006,,,,,,,,0
+RecursosHumanosAyudas="Ayudas del módulo de Recursos Humanos","RecursosHumanosAyudas.hhc",,"MenuPrincipal__RecursosHumanos.html","MenuPrincipal__RecursosHumanos.html",,,,,0x23520,,0x3006,,,,,,,,0
 
 [FILES]
+MenuPrincipal__RecursosHumanos.html
 Asistencia__RecursosHumanos.html
 HorasExtra__RecursosHumanos.html
 AsigCapacitacion_RecursosHumanos.html

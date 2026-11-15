@@ -9,6 +9,11 @@
 </OBJECT>
 <UL>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Men&#250; principal">
+		<param name="Local" value="MenuPrincipal__RecursosHumanos.html">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Procesos">
 		<param name="ImageNumber" value="1">
 		</OBJECT>

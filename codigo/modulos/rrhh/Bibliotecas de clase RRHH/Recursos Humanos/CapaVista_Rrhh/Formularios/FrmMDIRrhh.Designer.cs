@@ -422,6 +422,7 @@ namespace CapaVista_Rrhh.Formularios
             this.RrhhBtnAyuda.Size = new System.Drawing.Size(84, 79);
             this.RrhhBtnAyuda.TabIndex = 2;
             this.RrhhBtnAyuda.UseVisualStyleBackColor = false;
+            this.RrhhBtnAyuda.Click += new System.EventHandler(this.RrhhBtnAyuda_Click);
             this.RrhhPbMascota.BackColor = System.Drawing.Color.Transparent;
             this.RrhhPbMascota.Image = global::CapaVista_Rrhh.Properties.Resources.mascota;
             this.RrhhPbMascota.Location = new System.Drawing.Point(760, 10);
