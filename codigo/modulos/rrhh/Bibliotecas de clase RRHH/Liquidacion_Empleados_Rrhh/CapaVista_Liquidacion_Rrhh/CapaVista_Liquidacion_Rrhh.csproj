@@ -111,6 +111,12 @@
     <Compile Include="frmReportes\FrmReporteBajaEmpleado.Designer.cs">
       <DependentUpon>FrmReporteBajaEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportes\FrmReporteLiquidacionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes\FrmReporteLiquidacionEmpleado.Designer.cs">
+      <DependentUpon>FrmReporteLiquidacionEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportes\FrmReporteMotivoBaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     <EmbeddedResource Include="frmReportes\FrmReporteBajaEmpleado.resx">
       <DependentUpon>FrmReporteBajaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes\FrmReporteLiquidacionEmpleado.resx">
+      <DependentUpon>FrmReporteLiquidacionEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportes\FrmReporteMotivoBaja.resx">
       <DependentUpon>FrmReporteMotivoBaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,15 +167,19 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RpBajaEmpleado.rdlc" />
+    <EmbeddedResource Include="Reportes\RpLiquidacion.rdlc" />
     <EmbeddedResource Include="Reportes\RpMotivoBaja.rdlc" />
     <EmbeddedResource Include="Reportes\RpParametroLey.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CapaControlador_Liquidacion_Rrhh.ClsModeloBajaEmpleado.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Liquidacion_Rrhh.ClsModeloDetalleLiquidacion.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Liquidacion_Rrhh.ClsModeloLiquidacion.datasource" />
     <None Include="Properties\DataSources\CapaControlador_Liquidacion_Rrhh.Modelos_de_Controladores.ClsModeloMotivoBaja+ClsModeloCapacitacion.datasource" />
     <None Include="Properties\DataSources\CapaControlador_Liquidacion_Rrhh.Modelos_de_Controladores.ClsModeloMotivoBaja.datasource" />
     <None Include="Properties\DataSources\CapaControlador_Liquidacion_Rrhh.Modelos_de_Controladores.ClsModeloParametroLey.datasource" />
+    <None Include="Properties\DataSources\SqlServerTypes.Utilities.datasource" />
     <None Include="Resources\fondo_dashboard.png" />
   </ItemGroup>
   <ItemGroup>

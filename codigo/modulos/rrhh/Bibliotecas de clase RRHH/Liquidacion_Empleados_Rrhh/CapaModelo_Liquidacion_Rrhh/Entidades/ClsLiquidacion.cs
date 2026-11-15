@@ -31,5 +31,8 @@ namespace CapaModelo_Liquidacion_Rrhh.Entidades
 
         // Propiedades adicionales para la vista (Grilla)
         public string NombresEmpleado { get; set; }
+        public string NombreEmpresa { get; set; }
+        public string NombreEmpleado { get; set; }
+        public string NombreMotivoBaja { get; set; }
     }
 }

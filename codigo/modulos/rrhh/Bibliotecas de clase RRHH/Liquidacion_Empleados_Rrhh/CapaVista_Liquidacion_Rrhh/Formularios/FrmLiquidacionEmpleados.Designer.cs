@@ -31,17 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLiquidacionEmpleados));
             this.RrhhPnlPrincipal = new System.Windows.Forms.Panel();
             this.RrhhTxtParametrosUsados = new System.Windows.Forms.TextBox();
-            this.RrhhPnlContenedorCatalogos = new System.Windows.Forms.Panel();
-            this.RrhhLblCatalogo = new System.Windows.Forms.Label();
-            this.RrhhPnlBajEmpleado = new System.Windows.Forms.Panel();
-            this.RrhhBtnCatalogoBajaEmpleado = new System.Windows.Forms.Button();
-            this.RrhhLblCatalogoBajaEmpleado = new System.Windows.Forms.Label();
-            this.RrhhPnlParametroLey = new System.Windows.Forms.Panel();
-            this.RrhhBtnCatalogoParametroLey = new System.Windows.Forms.Button();
-            this.RrhhLblCatalogoParametroLey = new System.Windows.Forms.Label();
-            this.RrhhPnlMotivoBaja = new System.Windows.Forms.Panel();
-            this.RrhhBtnCatalogoMotivoBaja = new System.Windows.Forms.Button();
-            this.RrhhLblCatalogoMotivoBaja = new System.Windows.Forms.Label();
             this.RrhhLblLiquidaciones = new System.Windows.Forms.Label();
             this.RrhhDgvLiquidaciones = new System.Windows.Forms.DataGridView();
             this.RrhhLblLiquidacionDetalle = new System.Windows.Forms.Label();
@@ -114,10 +103,6 @@
             this.RrhhBtnModificarLiqui = new System.Windows.Forms.Button();
             this.RrhhBtnGuardarLiqui = new System.Windows.Forms.Button();
             this.RrhhPnlPrincipal.SuspendLayout();
-            this.RrhhPnlContenedorCatalogos.SuspendLayout();
-            this.RrhhPnlBajEmpleado.SuspendLayout();
-            this.RrhhPnlParametroLey.SuspendLayout();
-            this.RrhhPnlMotivoBaja.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhDgvLiquidaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhDtvLiquidacionDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhDtvConceptos)).BeginInit();
@@ -131,7 +116,6 @@
             // 
             this.RrhhPnlPrincipal.BackgroundImage = global::CapaVista_Liquidacion_Rrhh.Properties.Resources.fondo_dashboard;
             this.RrhhPnlPrincipal.Controls.Add(this.RrhhTxtParametrosUsados);
-            this.RrhhPnlPrincipal.Controls.Add(this.RrhhPnlContenedorCatalogos);
             this.RrhhPnlPrincipal.Controls.Add(this.RrhhLblLiquidaciones);
             this.RrhhPnlPrincipal.Controls.Add(this.RrhhDgvLiquidaciones);
             this.RrhhPnlPrincipal.Controls.Add(this.RrhhLblLiquidacionDetalle);
@@ -165,159 +149,13 @@
             this.RrhhTxtParametrosUsados.Size = new System.Drawing.Size(248, 232);
             this.RrhhTxtParametrosUsados.TabIndex = 25;
             // 
-            // RrhhPnlContenedorCatalogos
-            // 
-            this.RrhhPnlContenedorCatalogos.BackColor = System.Drawing.Color.Transparent;
-            this.RrhhPnlContenedorCatalogos.Controls.Add(this.RrhhLblCatalogo);
-            this.RrhhPnlContenedorCatalogos.Controls.Add(this.RrhhPnlBajEmpleado);
-            this.RrhhPnlContenedorCatalogos.Controls.Add(this.RrhhPnlParametroLey);
-            this.RrhhPnlContenedorCatalogos.Controls.Add(this.RrhhPnlMotivoBaja);
-            this.RrhhPnlContenedorCatalogos.Location = new System.Drawing.Point(1128, 504);
-            this.RrhhPnlContenedorCatalogos.Margin = new System.Windows.Forms.Padding(2);
-            this.RrhhPnlContenedorCatalogos.Name = "RrhhPnlContenedorCatalogos";
-            this.RrhhPnlContenedorCatalogos.Size = new System.Drawing.Size(246, 260);
-            this.RrhhPnlContenedorCatalogos.TabIndex = 24;
-            // 
-            // RrhhLblCatalogo
-            // 
-            this.RrhhLblCatalogo.AutoSize = true;
-            this.RrhhLblCatalogo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.RrhhLblCatalogo.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhLblCatalogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblCatalogo.Location = new System.Drawing.Point(80, 8);
-            this.RrhhLblCatalogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.RrhhLblCatalogo.Name = "RrhhLblCatalogo";
-            this.RrhhLblCatalogo.Size = new System.Drawing.Size(103, 22);
-            this.RrhhLblCatalogo.TabIndex = 5;
-            this.RrhhLblCatalogo.Text = "Catalogos ";
-            // 
-            // RrhhPnlBajEmpleado
-            // 
-            this.RrhhPnlBajEmpleado.AutoSize = true;
-            this.RrhhPnlBajEmpleado.BackColor = System.Drawing.Color.White;
-            this.RrhhPnlBajEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhPnlBajEmpleado.Controls.Add(this.RrhhBtnCatalogoBajaEmpleado);
-            this.RrhhPnlBajEmpleado.Controls.Add(this.RrhhLblCatalogoBajaEmpleado);
-            this.RrhhPnlBajEmpleado.Location = new System.Drawing.Point(30, 188);
-            this.RrhhPnlBajEmpleado.Margin = new System.Windows.Forms.Padding(2);
-            this.RrhhPnlBajEmpleado.Name = "RrhhPnlBajEmpleado";
-            this.RrhhPnlBajEmpleado.Size = new System.Drawing.Size(197, 58);
-            this.RrhhPnlBajEmpleado.TabIndex = 23;
-            // 
-            // RrhhBtnCatalogoBajaEmpleado
-            // 
-            this.RrhhBtnCatalogoBajaEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhBtnCatalogoBajaEmpleado.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhBtnCatalogoBajaEmpleado.ForeColor = System.Drawing.Color.Transparent;
-            this.RrhhBtnCatalogoBajaEmpleado.Location = new System.Drawing.Point(66, 32);
-            this.RrhhBtnCatalogoBajaEmpleado.Margin = new System.Windows.Forms.Padding(2);
-            this.RrhhBtnCatalogoBajaEmpleado.Name = "RrhhBtnCatalogoBajaEmpleado";
-            this.RrhhBtnCatalogoBajaEmpleado.Size = new System.Drawing.Size(56, 24);
-            this.RrhhBtnCatalogoBajaEmpleado.TabIndex = 4;
-            this.RrhhBtnCatalogoBajaEmpleado.Text = "Abrir";
-            this.RrhhBtnCatalogoBajaEmpleado.UseVisualStyleBackColor = false;
-            this.RrhhBtnCatalogoBajaEmpleado.Click += new System.EventHandler(this.RrhhBtnCatalogoBajaEmpleado_Click);
-            // 
-            // RrhhLblCatalogoBajaEmpleado
-            // 
-            this.RrhhLblCatalogoBajaEmpleado.AutoSize = true;
-            this.RrhhLblCatalogoBajaEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.RrhhLblCatalogoBajaEmpleado.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhLblCatalogoBajaEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblCatalogoBajaEmpleado.Location = new System.Drawing.Point(24, 6);
-            this.RrhhLblCatalogoBajaEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.RrhhLblCatalogoBajaEmpleado.Name = "RrhhLblCatalogoBajaEmpleado";
-            this.RrhhLblCatalogoBajaEmpleado.Size = new System.Drawing.Size(171, 22);
-            this.RrhhLblCatalogoBajaEmpleado.TabIndex = 3;
-            this.RrhhLblCatalogoBajaEmpleado.Text = "Baja de empleado";
-            // 
-            // RrhhPnlParametroLey
-            // 
-            this.RrhhPnlParametroLey.AutoSize = true;
-            this.RrhhPnlParametroLey.BackColor = System.Drawing.Color.White;
-            this.RrhhPnlParametroLey.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhPnlParametroLey.Controls.Add(this.RrhhBtnCatalogoParametroLey);
-            this.RrhhPnlParametroLey.Controls.Add(this.RrhhLblCatalogoParametroLey);
-            this.RrhhPnlParametroLey.Location = new System.Drawing.Point(30, 110);
-            this.RrhhPnlParametroLey.Margin = new System.Windows.Forms.Padding(2);
-            this.RrhhPnlParametroLey.Name = "RrhhPnlParametroLey";
-            this.RrhhPnlParametroLey.Size = new System.Drawing.Size(199, 58);
-            this.RrhhPnlParametroLey.TabIndex = 22;
-            // 
-            // RrhhBtnCatalogoParametroLey
-            // 
-            this.RrhhBtnCatalogoParametroLey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhBtnCatalogoParametroLey.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhBtnCatalogoParametroLey.ForeColor = System.Drawing.Color.Transparent;
-            this.RrhhBtnCatalogoParametroLey.Location = new System.Drawing.Point(60, 32);
-            this.RrhhBtnCatalogoParametroLey.Margin = new System.Windows.Forms.Padding(2);
-            this.RrhhBtnCatalogoParametroLey.Name = "RrhhBtnCatalogoParametroLey";
-            this.RrhhBtnCatalogoParametroLey.Size = new System.Drawing.Size(56, 24);
-            this.RrhhBtnCatalogoParametroLey.TabIndex = 4;
-            this.RrhhBtnCatalogoParametroLey.Text = "Abrir";
-            this.RrhhBtnCatalogoParametroLey.UseVisualStyleBackColor = false;
-            this.RrhhBtnCatalogoParametroLey.Click += new System.EventHandler(this.RrhhBtnCatalogoParametroLey_Click);
-            // 
-            // RrhhLblCatalogoParametroLey
-            // 
-            this.RrhhLblCatalogoParametroLey.AutoSize = true;
-            this.RrhhLblCatalogoParametroLey.BackColor = System.Drawing.Color.Transparent;
-            this.RrhhLblCatalogoParametroLey.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhLblCatalogoParametroLey.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblCatalogoParametroLey.Location = new System.Drawing.Point(24, 6);
-            this.RrhhLblCatalogoParametroLey.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.RrhhLblCatalogoParametroLey.Name = "RrhhLblCatalogoParametroLey";
-            this.RrhhLblCatalogoParametroLey.Size = new System.Drawing.Size(173, 22);
-            this.RrhhLblCatalogoParametroLey.TabIndex = 3;
-            this.RrhhLblCatalogoParametroLey.Text = "Parametros de ley";
-            // 
-            // RrhhPnlMotivoBaja
-            // 
-            this.RrhhPnlMotivoBaja.AutoSize = true;
-            this.RrhhPnlMotivoBaja.BackColor = System.Drawing.Color.White;
-            this.RrhhPnlMotivoBaja.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhPnlMotivoBaja.Controls.Add(this.RrhhBtnCatalogoMotivoBaja);
-            this.RrhhPnlMotivoBaja.Controls.Add(this.RrhhLblCatalogoMotivoBaja);
-            this.RrhhPnlMotivoBaja.Location = new System.Drawing.Point(30, 39);
-            this.RrhhPnlMotivoBaja.Margin = new System.Windows.Forms.Padding(2);
-            this.RrhhPnlMotivoBaja.Name = "RrhhPnlMotivoBaja";
-            this.RrhhPnlMotivoBaja.Size = new System.Drawing.Size(194, 58);
-            this.RrhhPnlMotivoBaja.TabIndex = 21;
-            // 
-            // RrhhBtnCatalogoMotivoBaja
-            // 
-            this.RrhhBtnCatalogoMotivoBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhBtnCatalogoMotivoBaja.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhBtnCatalogoMotivoBaja.ForeColor = System.Drawing.Color.Transparent;
-            this.RrhhBtnCatalogoMotivoBaja.Location = new System.Drawing.Point(66, 32);
-            this.RrhhBtnCatalogoMotivoBaja.Margin = new System.Windows.Forms.Padding(2);
-            this.RrhhBtnCatalogoMotivoBaja.Name = "RrhhBtnCatalogoMotivoBaja";
-            this.RrhhBtnCatalogoMotivoBaja.Size = new System.Drawing.Size(56, 24);
-            this.RrhhBtnCatalogoMotivoBaja.TabIndex = 4;
-            this.RrhhBtnCatalogoMotivoBaja.Text = "Abrir";
-            this.RrhhBtnCatalogoMotivoBaja.UseVisualStyleBackColor = false;
-            this.RrhhBtnCatalogoMotivoBaja.Click += new System.EventHandler(this.RrhhBtnCatalogoMotivoBaja_Click);
-            // 
-            // RrhhLblCatalogoMotivoBaja
-            // 
-            this.RrhhLblCatalogoMotivoBaja.AutoSize = true;
-            this.RrhhLblCatalogoMotivoBaja.BackColor = System.Drawing.Color.Transparent;
-            this.RrhhLblCatalogoMotivoBaja.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhLblCatalogoMotivoBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblCatalogoMotivoBaja.Location = new System.Drawing.Point(30, 6);
-            this.RrhhLblCatalogoMotivoBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.RrhhLblCatalogoMotivoBaja.Name = "RrhhLblCatalogoMotivoBaja";
-            this.RrhhLblCatalogoMotivoBaja.Size = new System.Drawing.Size(142, 22);
-            this.RrhhLblCatalogoMotivoBaja.TabIndex = 3;
-            this.RrhhLblCatalogoMotivoBaja.Text = "Motivo de baja";
-            // 
             // RrhhLblLiquidaciones
             // 
             this.RrhhLblLiquidaciones.AutoSize = true;
             this.RrhhLblLiquidaciones.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblLiquidaciones.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblLiquidaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblLiquidaciones.Location = new System.Drawing.Point(56, 672);
+            this.RrhhLblLiquidaciones.Location = new System.Drawing.Point(56, 632);
             this.RrhhLblLiquidaciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblLiquidaciones.Name = "RrhhLblLiquidaciones";
             this.RrhhLblLiquidaciones.Size = new System.Drawing.Size(154, 30);
@@ -327,12 +165,12 @@
             // RrhhDgvLiquidaciones
             // 
             this.RrhhDgvLiquidaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RrhhDgvLiquidaciones.Location = new System.Drawing.Point(56, 720);
+            this.RrhhDgvLiquidaciones.Location = new System.Drawing.Point(56, 672);
             this.RrhhDgvLiquidaciones.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhDgvLiquidaciones.Name = "RrhhDgvLiquidaciones";
             this.RrhhDgvLiquidaciones.RowHeadersWidth = 51;
             this.RrhhDgvLiquidaciones.RowTemplate.Height = 24;
-            this.RrhhDgvLiquidaciones.Size = new System.Drawing.Size(1032, 168);
+            this.RrhhDgvLiquidaciones.Size = new System.Drawing.Size(1256, 168);
             this.RrhhDgvLiquidaciones.TabIndex = 16;
             this.RrhhDgvLiquidaciones.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RrhhDgvLiquidaciones_RowHeaderMouseClick_1);
             // 
@@ -440,7 +278,7 @@
             this.RrhhPnlContenidoLiqui.Location = new System.Drawing.Point(6, 195);
             this.RrhhPnlContenidoLiqui.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhPnlContenidoLiqui.Name = "RrhhPnlContenidoLiqui";
-            this.RrhhPnlContenidoLiqui.Size = new System.Drawing.Size(1082, 293);
+            this.RrhhPnlContenidoLiqui.Size = new System.Drawing.Size(1362, 293);
             this.RrhhPnlContenidoLiqui.TabIndex = 11;
             // 
             // RrhhTxtIdEmpresa
@@ -554,7 +392,6 @@
             // 
             // RrhhTxtMontoLetras
             // 
-            this.RrhhTxtMontoLetras.Enabled = false;
             this.RrhhTxtMontoLetras.Location = new System.Drawing.Point(912, 104);
             this.RrhhTxtMontoLetras.Margin = new System.Windows.Forms.Padding(2);
             this.RrhhTxtMontoLetras.Multiline = true;
@@ -1037,6 +874,7 @@
             this.RrhhBtnAyudaLiqui.Size = new System.Drawing.Size(70, 70);
             this.RrhhBtnAyudaLiqui.TabIndex = 9;
             this.RrhhBtnAyudaLiqui.UseVisualStyleBackColor = true;
+            this.RrhhBtnAyudaLiqui.Click += new System.EventHandler(this.RrhhBtnAyudaLiqui_Click);
             // 
             // RrhhBtnFinLiqui
             // 
@@ -1143,9 +981,10 @@
             // 
             // FrmLiquidacionEmpleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1398, 906);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1398, 856);
             this.Controls.Add(this.RrhhPnlPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1157,14 +996,6 @@
             this.Load += new System.EventHandler(this.FrmLiquidacionEmpleados_Load);
             this.RrhhPnlPrincipal.ResumeLayout(false);
             this.RrhhPnlPrincipal.PerformLayout();
-            this.RrhhPnlContenedorCatalogos.ResumeLayout(false);
-            this.RrhhPnlContenedorCatalogos.PerformLayout();
-            this.RrhhPnlBajEmpleado.ResumeLayout(false);
-            this.RrhhPnlBajEmpleado.PerformLayout();
-            this.RrhhPnlParametroLey.ResumeLayout(false);
-            this.RrhhPnlParametroLey.PerformLayout();
-            this.RrhhPnlMotivoBaja.ResumeLayout(false);
-            this.RrhhPnlMotivoBaja.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhDgvLiquidaciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhDtvLiquidacionDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhDtvConceptos)).EndInit();
@@ -1248,17 +1079,6 @@
         private System.Windows.Forms.Label RrhhLblEstado;
         private System.Windows.Forms.DateTimePicker RrhhDtpFechaAprobacion;
         private System.Windows.Forms.Label RrhhLblFechaAprueba;
-        private System.Windows.Forms.Panel RrhhPnlContenedorCatalogos;
-        private System.Windows.Forms.Label RrhhLblCatalogo;
-        private System.Windows.Forms.Panel RrhhPnlBajEmpleado;
-        private System.Windows.Forms.Button RrhhBtnCatalogoBajaEmpleado;
-        private System.Windows.Forms.Label RrhhLblCatalogoBajaEmpleado;
-        private System.Windows.Forms.Panel RrhhPnlParametroLey;
-        private System.Windows.Forms.Button RrhhBtnCatalogoParametroLey;
-        private System.Windows.Forms.Label RrhhLblCatalogoParametroLey;
-        private System.Windows.Forms.Panel RrhhPnlMotivoBaja;
-        private System.Windows.Forms.Button RrhhBtnCatalogoMotivoBaja;
-        private System.Windows.Forms.Label RrhhLblCatalogoMotivoBaja;
         private System.Windows.Forms.Label RrhhLblLiquidaciones;
         private System.Windows.Forms.DataGridView RrhhDgvLiquidaciones;
         private System.Windows.Forms.TextBox RrhhTxtIdEmpresa;
