@@ -14,14 +14,16 @@
  *  nota de acceso por perfil. Es la única ventana del módulo que se puede
  *  maximizar, por eso el contenido se acomoda al tamaño que tenga.
  * Reglas especificas:
- *  Por ahora es un prototipo no funcional, los KPIs quedan en 0 y
- *  solo algunos botones del menú abren su ventana. El usuario, el
- *  rol y los permisos se reciben desde afuera con los métodos
- *  RrhhMetActualizarInfoUsuario y RrhhMetAplicarPermisos, para no
- *  depender de las DLL de Seguridad.
+ *  Los KPIs se leen de la base con ClsModeloResumen cada vez que el
+ *  MDI se activa, así se actualizan al cerrar cualquier ventana. El
+ *  botón Ayuda abre la página del menú principal en el .chm de RRHH.
+ *  El usuario, el rol y los permisos se reciben desde afuera con los
+ *  métodos RrhhMetActualizarInfoUsuario y RrhhMetAplicarPermisos, para
+ *  no depender de las DLL de Seguridad.
  * ===================================================================
 */
 
+using CapaControlador_Rrhh.Modelos_de_Controladores;
 using CapaVista_AsigCapacitacion.Formularios;
 using CapaVista_CierreNominas.Formularios;
 using CapaVista_Empleado.Formularios;
@@ -35,6 +37,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
 
 namespace CapaVista_Rrhh.Formularios
@@ -61,6 +64,8 @@ namespace CapaVista_Rrhh.Formularios
         // Inicio cambio - Byron Alexander Chiquito Paredes - 0901-23-3747
         private bool _CatalogosAbierto;
         private readonly Dictionary<Button, int> _BotonesCatalogos = new Dictionary<Button, int>();
+        private readonly ClsModeloResumen _Resumen = new ClsModeloResumen();
+        private bool _AvisoResumenMostrado;
         // Fin cambio - Byron Alexander Chiquito Paredes - 0901-23-3747
 
         public FrmMDIRrhh()
@@ -71,6 +76,10 @@ namespace CapaVista_Rrhh.Formularios
             RrhhPnlNavegador.Scroll += (Remitente, Evento) => RrhhPnlNavegador.Invalidate(true);
             RrhhPnlNavegador.MouseWheel += (Remitente, Evento) => RrhhPnlNavegador.Invalidate(true);
             this.Load += FrmMDIRrhh_Load;
+            // Inicio cambio - Byron Alexander Chiquito Paredes - 0901-23-3747
+            // Activated también corre al abrir el MDI y al cerrar cualquier ventana del módulo
+            this.Activated += (Remitente, Evento) => RrhhMetCargarResumen();
+            // Fin cambio - Byron Alexander Chiquito Paredes - 0901-23-3747
         }
 
         protected override CreateParams CreateParams
@@ -534,6 +543,7 @@ namespace CapaVista_Rrhh.Formularios
                 Tuple.Create<string, int, Func<Form>>("Instructores", 9303, () => new FrmInstructoresNavegador()),
                 Tuple.Create<string, int, Func<Form>>("Evaluación de Capacitación", 9304, () => new FrmEvaluacionNavegador()),
                 Tuple.Create<string, int, Func<Form>>("Evaluación de Desempeño", 9402, () => new FrmRealizarEvaluacion()),
+                Tuple.Create<string, int, Func<Form>>("Baja de Empleados", 9704, () => new FrmBajaEmpleado()),
                 Tuple.Create<string, int, Func<Form>>("Motivos de Baja", 9702, () => new FrmMotivoBajaNavegador()),
                 Tuple.Create<string, int, Func<Form>>("Parámetros de Ley", 9703, () => new FrmParametrosLeyNavegador())
             };
@@ -644,6 +654,55 @@ namespace CapaVista_Rrhh.Formularios
                 : new[] { new Point(X + 2, Y - 6), new Point(X + 2, Y + 6), new Point(X + 9, Y) };
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             using (SolidBrush Pincel = new SolidBrush(RrhhBtnCatalogos.ForeColor)) e.Graphics.FillPolygon(Pincel, Flecha);
+        }
+        // Fin cambio - Byron Alexander Chiquito Paredes - 0901-23-3747
+
+        // Inicio cambio - Byron Alexander Chiquito Paredes - 0901-23-3747
+        // Llena las tarjetas del Resumen de Recursos Humanos con los datos de la base.
+        private void RrhhMetCargarResumen()
+        {
+            Label[] Valores = { RrhhLblKPIResp1, RrhhLblKPIResp2, RrhhLblKPIResp3,
+                                RrhhLblKPIResp4, RrhhLblKPIResp5, RrhhLblKPIResp6 };
+            try
+            {
+                _Resumen.RrhhMetCargar();
+                int[] Datos = { _Resumen.TotalColaboradores, _Resumen.PermisosPendientes,
+                                _Resumen.CapacitacionesPendientes, _Resumen.EvaluacionesPendientes,
+                                _Resumen.NominasEnCurso, _Resumen.EmpleadosLiquidacion };
+                for (int i = 0; i < Valores.Length; i++) Valores[i].Text = Datos[i].ToString("N0");
+            }
+            catch (Exception Ex)
+            {
+                foreach (Label Valor in Valores) Valor.Text = "-";
+                // el aviso sale una sola vez; si no, al cerrarlo el MDI se vuelve a activar y lo repite
+                if (_AvisoResumenMostrado) return;
+                _AvisoResumenMostrado = true;
+                MessageBox.Show("No se pudo cargar el Resumen de Recursos Humanos.\n" + Ex.Message,
+                                "Resumen", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void RrhhBtnAyuda_Click(object sender, EventArgs e)
+        {
+            RrhhMetAbrirAyuda("MenuPrincipal__RecursosHumanos.html");
+        }
+
+        // Busca el .chm de RRHH subiendo carpetas desde donde corre el programa, igual que
+        // en Asistencia, así abre en cualquier computadora que tenga el repo.
+        private void RrhhMetAbrirAyuda(string Pagina)
+        {
+            const string Ayuda = @"ayuda\modulos\rrhh\RrhhAyudas\RecursosHumanosAyudas.chm";
+            for (var Carpeta = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory); Carpeta != null; Carpeta = Carpeta.Parent)
+            {
+                string Ruta = Path.Combine(Carpeta.FullName, Ayuda);
+                if (File.Exists(Ruta))
+                {
+                    Help.ShowHelp(this, Ruta, Pagina);
+                    return;
+                }
+            }
+            MessageBox.Show("No se encontró el archivo de ayuda de RRHH.", "Ayuda",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         // Fin cambio - Byron Alexander Chiquito Paredes - 0901-23-3747
 
